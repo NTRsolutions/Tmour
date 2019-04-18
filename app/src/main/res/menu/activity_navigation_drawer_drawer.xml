@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single"
+        android:id="@+id/grid">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/nav_home"
+            android:title="@string/Home" />
+        <item
+            android:id="@+id/nav_my_order"
+            android:icon="@drawable/my_order"
+            android:title="@string/MyOrders" />
+        <item
+            android:id="@+id/nav_offers"
+            android:icon="@drawable/offfer"
+            android:title="@string/Offers" />
+        <item android:title="" />
+        <item android:title="" />
+
+
+    </group>
+
+
+    <group android:checkableBehavior="none"
+        android:id="@+id/grid1">
+
+        <item
+            android:id="@+id/nav_stores"
+            android:icon="@drawable/store"
+            android:title="@string/Stores" />
+
+
+    </group>
+
+    <group android:checkableBehavior="none"
+        android:id="@+id/grid2">
+
+
+        <item
+            android:id="@+id/nav_about_datestreet"
+            android:title="@string/about_dates_street" />
+    </group>
+
+</menu>

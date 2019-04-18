@@ -1,0 +1,111 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Tmour</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_settings">Settings</string>
+
+
+   <!--menu-->
+
+    <string name="hi_guest">Hi Guest</string>
+    <string name="about_dates_street">About DatesStreet</string>
+    <string name="Stores">Stores</string>
+    <string name="Offers">Offers</string>
+    <string name="MyOrders">My Orders</string>
+    <string name="Home">Home</string>
+    <string name="home">HOME</string>
+    <string name="search">Search</string>
+    <string name="product">PRODUCTS</string>
+    <string name="my_cart">MY CART</string>
+    <string name="favourite">FAVORITES</string>
+    <string name="my_account">MY ACCOUNT</string>
+
+
+    <!--login screen-->
+
+    <string name="sign_in_google" tools:ignore="ExtraTranslation">Log in with Google</string>
+    <string name="an_account">Already have an account ?</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="forgott_password">Forgot Password</string>
+    <string name="create_an_account">Create an  account</string>
+
+
+
+    <!--register-->
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="firstname">First Name</string>
+    <string name="lastname">Last Name</string>
+    <string name="gender">Gender(Optional)</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="date">Date of Birth(Optional)</string>
+    <string name="receive_update">Receive updates on offers, promotions and discounts.</string>
+    <string name="subscribe">Subscribe to NewsLetter</string>
+    <string name="privacy_policy">By creating an account you agree to the  Privacy Policy  and to the  Terms of use.</string>
+    <string name="create_account">CREATE ACCOUNT</string>
+    <string name="createaccount_small">Create Account</string>
+    <string name="By_creating">By creating an account you agree to the</string>
+    <string name="privacy">Privacy Policy</string>
+
+    <!--Store page-->
+    <string name="find_store">FIND A  STORE</string>
+    <string name="categories">CATEGORIES</string>
+    <string name="search_cap">SEARCH</string>
+    <string name="user_name">Abd Ei Maaboud</string>
+    <string name="new_icon">New</string>
+    <string name="coffe">Coffee, Herbal Tea</string>
+    <string name="ten">(10)</string>
+    <string name="pay_by">Pay  By :</string>
+    <string name="cash">Cash, Credit Card</string>
+    <string name="avg">Avg :</string>
+    <string name="avg_min">45  min</string>
+    <string name="minimum">Min 45.00 KWD</string>
+    <string name="delivary_text">Delivery  5.00 KWD</string>
+    <string name="area_name_placed">Area Name Placed Here</string>
+
+    <!--search-->
+    <string name="search_area">Search Area</string>
+
+
+    <string name="offers">Offers</string>
+    <string name="offers_disc">30% OFF on Cardimom Coffee</string>
+    <string name="offers_desc">Offer description Offer description Offer description Offer description</string>
+    <string name="offers_price">22.00 KWD</string>
+    <string name="offers_fake_price">22.00 KWD</string>
+
+    <string name="rateus">RATE US</string>
+    <string name="reorder">REORDER</string>
+    <string name="name">Abd El Maaboud</string>
+    <string name="order_date">17th February,2019</string>
+    <string name="time">20:25 PM</string>
+    <string name="order_id">Order ID:</string>
+    <string name="order_id_num">1021452</string>
+    <string name="successful">Successful</string>
+
+    <string name="cart">Cart</string>
+    <string name="itemprice">Item Price: </string>
+    <string name="itemkd"> KWD 10.00</string>
+    <string name="total">Total: </string>
+    <string name="Quantity">Quantity</string>
+
+
+
+
+
+    <string-array name="theme_array">
+
+        <item>select</item>
+
+        <item>Black</item>
+
+        <item>White</item>
+
+    </string-array>
+
+
+</resources>

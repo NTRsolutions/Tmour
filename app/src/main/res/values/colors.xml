@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <color name="colorPrimary">#c29f69</color>
+    <color name="colorPrimaryDark">#bf9a65</color>
+    <color name="colorAccent">#8f7155</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="black_light">#1f1f1f</color>
+
+    <color name="boder">#b7b7b7</color>
+    <color name="light_grey">#cccccc</color>
+    <color name="background">#f2f2f2</color>
+    <color name="edittextline">#929292</color>
+    <color name="orange">#f49f31</color>
+
+    <color name="offers_discount">#1f1f1f</color>
+    <color name="grey">#616161</color>
+    <color name="dark_grey">#dcdcdc</color>
+    <color name="back">#bf9a65</color>
+    <color name="light_greyy" tools:ignore="MissingDefaultResource">#a1a1a1</color>
+
+    <!--
+
+
+
+    (login),
+login-top-background-color=c29f69,
+login-bottom-background-color=f2f2f2,
+login-botton-background-color=ffffff,
+login-text-color=616161,
+login-Email-backgound-color=bf9a65,
+login-Email-text-color=ffffff,
+already-have-an-account-text-color-616161,
+Email+password-color=a1a1a1,
+show-text-color=616161,
+forgot-password-text-color=616161,
+create-an-account-text-color=8f7155,
+bottom-menu-background-color=bf9a65,
+text-white,
+
+
+
+
+    -->
+
+
+</resources>
