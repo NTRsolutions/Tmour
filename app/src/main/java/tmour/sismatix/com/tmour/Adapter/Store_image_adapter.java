@@ -2,6 +2,10 @@ package tmour.sismatix.com.tmour.Adapter;
 
 import android.content.Context;
 import android.os.Build;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -13,6 +17,7 @@ import android.widget.TextView;
 
 import java.util.List;
 
+import tmour.sismatix.com.tmour.Fregment.Strore_info_freg;
 import tmour.sismatix.com.tmour.Model.Store_image_model;
 import tmour.sismatix.com.tmour.R;
 
@@ -47,6 +52,16 @@ public class Store_image_adapter extends RecyclerView.Adapter<Store_image_adapte
         public void onBindViewHolder(MyViewHolder holder, final int position) {
 
             final Store_image_model store_model = model.get(position);
+            holder.lv_store_image_click.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    AppCompatActivity activity = (AppCompatActivity) view.getContext();
+                    Fragment myFragment = new Strore_info_freg();
+                    // myFragment.setArguments(b);
+                    activity.getSupportFragmentManager().beginTransaction().replace(R.id.main_fram_layout, myFragment).addToBackStack(null).commit();
+
+                }
+            });
 
 
 

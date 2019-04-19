@@ -46,7 +46,6 @@ public class Home_freg extends Fragment {
         view = inflater.inflate(R.layout.fragment_home_freg, container, false);
         setHasOptionsMenu(true);
         Navigation_drawer_activity.toolbar.setTitle("");
-
         Allocate_Memory(view);
 
         return view;

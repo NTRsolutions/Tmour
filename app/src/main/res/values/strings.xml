@@ -4,9 +4,7 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="action_settings">Settings</string>
 
-
-   <!--menu-->
-
+    <!--menu-->
     <string name="hi_guest">Hi Guest</string>
     <string name="about_dates_street">About DatesStreet</string>
     <string name="Stores">Stores</string>
@@ -20,19 +18,14 @@
     <string name="favourite">FAVORITES</string>
     <string name="my_account">MY ACCOUNT</string>
 
-
     <!--login screen-->
-
     <string name="sign_in_google" tools:ignore="ExtraTranslation">Log in with Google</string>
     <string name="an_account">Already have an account ?</string>
     <string name="email">Email</string>
     <string name="password">Password</string>
     <string name="login">Login</string>
-    <string name="forgott_password">Forgot Password</string>
+    <string name="forgott_password">Forgot Password?</string>
     <string name="create_an_account">Create an  account</string>
-
-
-
     <!--register-->
 
     <!-- TODO: Remove or change this placeholder text -->
@@ -46,7 +39,7 @@
     <string name="date">Date of Birth(Optional)</string>
     <string name="receive_update">Receive updates on offers, promotions and discounts.</string>
     <string name="subscribe">Subscribe to NewsLetter</string>
-    <string name="privacy_policy">By creating an account you agree to the  Privacy Policy  and to the  Terms of use.</string>
+    <string name="privacy_policy">By creating an account you agree to the <font fgcolor='#c29f69'>Privacy Policy </font>to the<font fgcolor='#c29f69'>Terms of use.</font></string>
     <string name="create_account">CREATE ACCOUNT</string>
     <string name="createaccount_small">Create Account</string>
     <string name="By_creating">By creating an account you agree to the</string>
@@ -93,12 +86,20 @@
     <string name="total">Total: </string>
     <string name="Quantity">Quantity</string>
 
-
-
+    <!--Store info-->
+    <string name="store">Store Info</string>
+    <string name="productname">Dates Street </string>
+    <string name="orderdetails">ORDERING DETAILS</string>
+    <string name="deliverytime">DELIVERY TIME</string>
+    <string name="minimumorder">MINIMUM ORDER</string>
+    <string name="servicecharge">SERVICE CHARGE</string>
+    <string name="preorder">PREORDER</string>
+    <string name="othersinfos">OTHER INFOS</string>
+    <string name="storearea">STORE AREA</string>
+    <string name="openinghours">OPENING HOURS</string>
 
 
     <string-array name="theme_array">
-
         <item>select</item>
 
         <item>Black</item>
@@ -106,6 +107,5 @@
         <item>White</item>
 
     </string-array>
-
 
 </resources>

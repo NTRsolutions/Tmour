@@ -114,7 +114,6 @@ public class Login_freg extends Fragment implements View.OnClickListener {
         et_password_login = (TextInputEditText) view.findViewById(R.id.et_password_login);
         et_Email_login = (EditText) view.findViewById(R.id.et_Email_login);
 
-
         tv_already_have_an_account.setTypeface(Navigation_drawer_activity.roboto_bold);
         tv_forgot_password.setTypeface(Navigation_drawer_activity.roboto_regular);
         tv_login.setTypeface(Navigation_drawer_activity.roboto_bold);
