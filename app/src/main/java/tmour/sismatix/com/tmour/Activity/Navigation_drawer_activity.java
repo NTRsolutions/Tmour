@@ -75,7 +75,7 @@ public class Navigation_drawer_activity extends AppCompatActivity
 
 
         navigationView.setNavigationItemSelectedListener(this);
-        //--------------bottom navigation view----------//
+
         Bootom_Navigation_view();
 
         getSupportFragmentManager().addOnBackStackChangedListener(new FragmentManager.OnBackStackChangedListener() {
