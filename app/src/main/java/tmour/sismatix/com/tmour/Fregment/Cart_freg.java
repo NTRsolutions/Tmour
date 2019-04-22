@@ -3,6 +3,8 @@ package tmour.sismatix.com.tmour.Fregment;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -11,6 +13,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -33,6 +36,7 @@ public class Cart_freg extends Fragment {
     public static List<Cart_Model> cartList = new ArrayList<Cart_Model>();
     public static Cart_Adapter cart_adapter;
     RecyclerView recyclerview_cart;
+    LinearLayout lv_checkout;
 
     public Cart_freg() {
         // Required empty public constructor
@@ -61,7 +65,28 @@ public class Cart_freg extends Fragment {
 
         cart_adapter.notifyDataSetChanged();
 
+        lv_checkout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                pushFragment(new Checkout(),"checkout");
+            }
+        });
+
         return view;
+    }
+
+    private void pushFragment(Fragment fragment, String add_to_backstack) {
+        if (fragment == null)
+            return;
+        FragmentManager fragmentManager = getFragmentManager();
+        if (fragmentManager != null) {
+            FragmentTransaction ft = fragmentManager.beginTransaction();
+            if (ft != null) {
+                ft.replace(R.id.main_fram_layout, fragment);
+                ft.addToBackStack(add_to_backstack);
+                ft.commit();
+            }
+        }
     }
 
     private void AllocateMemory(View view) {
@@ -69,6 +94,7 @@ public class Cart_freg extends Fragment {
         cart_adapter = new Cart_Adapter(getActivity(), cartList);
         recyclerview_cart.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false));
         recyclerview_cart.setAdapter(cart_adapter);
+        lv_checkout = (LinearLayout)view.findViewById(R.id.lv_checkout);
     }
 
     @Override

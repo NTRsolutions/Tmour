@@ -4,6 +4,8 @@ import android.content.Context;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.LayerDrawable;
+import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,6 +18,7 @@ import android.widget.TextView;
 import java.util.List;
 
 import tmour.sismatix.com.tmour.Activity.Navigation_drawer_activity;
+import tmour.sismatix.com.tmour.Fregment.OrderDetails;
 import tmour.sismatix.com.tmour.Model.Store_area_Model;
 
 import tmour.sismatix.com.tmour.R;
@@ -57,6 +60,15 @@ public class Store_area_Adapter extends RecyclerView.Adapter<Store_area_Adapter.
         holder.tv_store_desc.setTypeface(Navigation_drawer_activity.roboto_bold);
         holder.tv_store_new.setTypeface(Navigation_drawer_activity.roboto_bold);
         holder.tv_store_name.setTypeface(Navigation_drawer_activity.roboto_bold);
+
+        holder.lv_store_area_click.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                /*AppCompatActivity activity = (AppCompatActivity) v.getContext();
+                Fragment myFragment = new OrderDetails();
+                activity.getSupportFragmentManager().beginTransaction().replace(R.id.main_fram_layout, myFragment).addToBackStack(null).commit();*/
+            }
+        });
 
         LayerDrawable star = (LayerDrawable) holder.ratingBar.getProgressDrawable();
         star.getDrawable(2).setColorFilter(Color.parseColor("#F49F31"), PorterDuff.Mode.SRC_ATOP);

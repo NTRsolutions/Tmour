@@ -58,13 +58,10 @@ public class Login_freg extends Fragment implements View.OnClickListener {
 
         Navigation_drawer_activity.changeToolbarFont(toolbar_login,getActivity());
 
-
         toolbar_login.setTitle(getResources().getString(R.string.login));
         ((Navigation_drawer_activity) getActivity()).setSupportActionBar(toolbar_login);
         ((Navigation_drawer_activity) getActivity()).getSupportActionBar()
                 .setDisplayHomeAsUpEnabled(true);
-
-
 
         tv_create_account.setOnClickListener(this);
 

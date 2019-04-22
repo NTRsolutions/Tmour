@@ -68,9 +68,6 @@ public class Store_freg extends Fragment {
         ((Navigation_drawer_activity) getActivity()).getSupportActionBar()
                 .setDisplayHomeAsUpEnabled(true);
 
-
-
-
         if (CheckNetwork.isNetworkAvailable(getActivity())) {
             CALL_STORE_IMAGE_API();
             CALL_STORE_AREA_API();

@@ -17,6 +17,7 @@
             android:id="@+id/nav_offers"
             android:icon="@drawable/offfer"
             android:title="@string/Offers" />
+
         <item android:title="" />
         <item android:title="" />
 

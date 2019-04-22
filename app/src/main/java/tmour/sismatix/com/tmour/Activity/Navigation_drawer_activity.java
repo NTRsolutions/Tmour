@@ -33,11 +33,14 @@ import java.util.Locale;
 import tmour.sismatix.com.tmour.CustomTypefaceSpan;
 import tmour.sismatix.com.tmour.Fregment.About_date_street_freg;
 import tmour.sismatix.com.tmour.Fregment.Cart_freg;
+import tmour.sismatix.com.tmour.Fregment.Checkout;
 import tmour.sismatix.com.tmour.Fregment.Home_freg;
 import tmour.sismatix.com.tmour.Fregment.Login_freg;
 import tmour.sismatix.com.tmour.Fregment.My_account_freg;
 import tmour.sismatix.com.tmour.Fregment.My_order_freg;
 import tmour.sismatix.com.tmour.Fregment.Offers_freg;
+import tmour.sismatix.com.tmour.Fregment.OrderDetails;
+import tmour.sismatix.com.tmour.Fregment.ProductDetails;
 import tmour.sismatix.com.tmour.Fregment.Product_freg;
 import tmour.sismatix.com.tmour.Fregment.Store_freg;
 import tmour.sismatix.com.tmour.Fregment.Wishlist_freg;
@@ -46,14 +49,15 @@ import tmour.sismatix.com.tmour.R;
 public class Navigation_drawer_activity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     DrawerLayout drawer;
-    public  static   Toolbar toolbar;
+    public static Toolbar toolbar;
     NavigationView navigationView;
     public BottomNavigationView bottom_navigation;
-    public static AssetManager am ;
-    public static Typeface roboto_bold,roboto_black,roboto_bold_conndensed,roboto_light,roboto_regular,roboto_thin,roboto_medium,cairo_bold;
+    public static AssetManager am;
+    public static Typeface roboto_bold, roboto_black, roboto_bold_conndensed, roboto_light, roboto_regular, roboto_thin, roboto_medium, cairo_bold;
 
-    ImageView iv_nav_setting,iv_nav_profile;
-    TextView  tv_nav_username;
+    ImageView iv_nav_setting, iv_nav_profile;
+    TextView tv_nav_username;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,12 +67,11 @@ public class Navigation_drawer_activity extends AppCompatActivity
         setSupportActionBar(toolbar);
         setFont_family_to_Menu();
 
-
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
-        changeToolbarFont(toolbar,Navigation_drawer_activity.this);
+        changeToolbarFont(toolbar, Navigation_drawer_activity.this);
 
 
         navigationView.setNavigationItemSelectedListener(this);
@@ -85,15 +88,6 @@ public class Navigation_drawer_activity extends AppCompatActivity
                 }
             }
         });
-
-
-
-
-
-
-
-
-
     }
 
     private void applyFontToMenuItem(MenuItem mi) {
@@ -102,6 +96,7 @@ public class Navigation_drawer_activity extends AppCompatActivity
         mNewTitle.setSpan(new CustomTypefaceSpan("", font), 0, mNewTitle.length(), Spannable.SPAN_INCLUSIVE_INCLUSIVE);
         mi.setTitle(mNewTitle);
     }
+
     private void setFont_family_to_Menu() {
 
         Menu menu = navigationView.getMenu();
@@ -143,26 +138,22 @@ public class Navigation_drawer_activity extends AppCompatActivity
         navigationView = (NavigationView) findViewById(R.id.nav_view);
         bottom_navigation = (BottomNavigationView) findViewById(R.id.bottom_navigation);
 
-
-
-
         View header = navigationView.getHeaderView(0);
-        iv_nav_setting=(ImageView) header.findViewById(R.id.iv_nav_setting);
-        iv_nav_profile=(ImageView) header.findViewById(R.id.iv_nav_profile);
-        tv_nav_username=(TextView) header.findViewById(R.id.tv_nav_username);
+        iv_nav_setting = (ImageView) header.findViewById(R.id.iv_nav_setting);
+        iv_nav_profile = (ImageView) header.findViewById(R.id.iv_nav_profile);
+        tv_nav_username = (TextView) header.findViewById(R.id.tv_nav_username);
 
         tv_nav_username.setTypeface(Navigation_drawer_activity.roboto_bold);
         setSupportActionBar(toolbar);
         ActionBar actionbar = getSupportActionBar();
         actionbar.setDisplayHomeAsUpEnabled(true);
     }
+
     private void SET_FONT_STYLE() {
         am = getApplicationContext().getAssets();
 
-
         roboto_bold = Typeface.createFromAsset(am,
                 String.format(Locale.getDefault(), "RobotoBold.ttf"));
-
         roboto_black = Typeface.createFromAsset(am,
                 String.format(Locale.getDefault(), "RobotoBlack.ttf"));
         roboto_bold_conndensed = Typeface.createFromAsset(am,
@@ -216,21 +207,19 @@ public class Navigation_drawer_activity extends AppCompatActivity
                     }
                 }
 
-
                 break;
             case R.id.bottom_nav_product:
-                pushFragment(new Product_freg(), "product");
+                pushFragment(new Product_freg(), "product");//OrderDetails()
                 break;
             case R.id.bottom_nav_cart:
                 pushFragment(new Cart_freg(), "cart");
                 break;
 
             case R.id.bottom_nav_favourite:
-                pushFragment(new Wishlist_freg(), "wishlist");
+                pushFragment(new Wishlist_freg(), "wishlist");//Wishlist_freg()
 
                 break;
             case R.id.bottom_nav_myaccount:
-
                 pushFragment(new Login_freg(), "My Account");
               /*  if(Login_preference.getLogin_flag(Navigation_activity.this).equalsIgnoreCase("1")) {
                     pushFragment(new Edit_premium_lawyer_profile(),"Edit_profile");
@@ -281,6 +270,7 @@ public class Navigation_drawer_activity extends AppCompatActivity
             pushFragment(new About_date_street_freg(), "about");
 
         }
+
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }

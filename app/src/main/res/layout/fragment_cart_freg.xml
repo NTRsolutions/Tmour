@@ -7,7 +7,6 @@
     android:orientation="vertical"
     tools:context=".Fregment.Cart_freg">
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -32,7 +31,6 @@
 
         </android.support.design.widget.AppBarLayout>
     </LinearLayout>
-
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -194,7 +192,6 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
                         android:orientation="horizontal"
                         android:weightSum="3">
 
@@ -227,6 +224,7 @@
                         </LinearLayout>
 
                         <LinearLayout
+                            android:id="@+id/lv_checkout"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="0.8"

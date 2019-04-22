@@ -48,6 +48,13 @@ public class Home_freg extends Fragment {
         Navigation_drawer_activity.toolbar.setTitle("");
         Allocate_Memory(view);
 
+        lv_home_login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                pushFragment(new Login_freg(),"login");
+            }
+        });
+
         return view;
     }
 

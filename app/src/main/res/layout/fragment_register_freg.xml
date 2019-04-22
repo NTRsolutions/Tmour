@@ -157,7 +157,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="0.5"
-                    android:layout_marginTop="10dp"
                     android:background="@null"
                     app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout"
                     android:textColorHint="@color/edittextline">
@@ -175,14 +174,13 @@
                         android:textColorHint="@color/edittextline" />
                 </android.support.design.widget.TextInputLayout>
 
-
                     <LinearLayout
                         android:id="@+id/lv_datepicker"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="3.5"
-                        android:gravity="end"
-                        android:paddingBottom="5dp">
+                        android:gravity="bottom"
+                        android:layout_marginBottom="10dp">
                         <ImageView
                             android:id="@+id/iv_calender"
                             android:layout_width="wrap_content"

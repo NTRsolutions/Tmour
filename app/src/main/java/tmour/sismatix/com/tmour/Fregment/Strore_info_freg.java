@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -28,10 +29,23 @@ public class Strore_info_freg extends Fragment {
 
         toolbar_store = (Toolbar) view.findViewById(R.id.toolbar_store_info);
         toolbar_store.setTitle(getResources().getString(R.string.store));
+        setHasOptionsMenu(true);
         ((Navigation_drawer_activity) getActivity()).setSupportActionBar(toolbar_store);
         ((Navigation_drawer_activity) getActivity()).getSupportActionBar()
                 .setDisplayHomeAsUpEnabled(true);
         return view;
     }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle item selection
+        switch (item.getItemId()) {
 
+            case android.R.id.home:
+                getActivity().onBackPressed();
+                return true;
+
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
 }
