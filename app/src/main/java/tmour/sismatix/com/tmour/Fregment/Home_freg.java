@@ -76,7 +76,6 @@ public class Home_freg extends Fragment {
         ArrayAdapter<String> adapter=new ArrayAdapter<String>(getActivity(),R.layout.spinner_layout,R.id.text, countries);
         spinner_home_area.setAdapter(adapter);
 
-
     }
 
 

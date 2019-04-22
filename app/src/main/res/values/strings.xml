@@ -19,6 +19,7 @@
     <string name="favourite">FAVORITES</string>
     <string name="my_account">MY ACCOUNT</string>
     <string name="checkout">Checkout</string>
+    <string name="edit">Edit</string>
 
     <!--login screen-->
 
@@ -33,7 +34,6 @@
     <!--register-->
     <!-- TODO: Remove or change this placeholder text -->
 
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="confirm_password">Confirm Password</string>
     <string name="firstname">First Name</string>
     <string name="lastname">Last Name</string>
@@ -54,7 +54,7 @@
     <string name="find_store">FIND A STORE</string>
     <string name="categories">CATEGORIES</string>
     <string name="search_cap">SEARCH</string>
-    <string name="user_name">Abd Ei Maaboud</string>
+    <string name="user_name">Abd El Maaboud</string>
     <string name="new_icon">New</string>
     <string name="coffe">Coffee, Herbal Tea</string>
     <string name="ten">(10)</string>
@@ -62,18 +62,24 @@
     <string name="cash">Cash, Credit Card</string>
     <string name="avg">Avg :</string>
     <string name="avg_min">45 min</string>
-    <string name="minimum">Min 45.00 KWD</string>
+    <string name="minimum">Min :45.00 KWD</string>
     <string name="delivary_text">Delivery 5.00 KWD</string>
     <string name="area_name_placed">Area Name Placed Here</string>
 
     <!--search-->
 
     <string name="search_area">Search Area</string>
+
+    <!--offers-->
+
     <string name="offers">Offers</string>
     <string name="offers_disc">30% OFF on Cardimom Coffee</string>
     <string name="offers_desc">Offer description Offer description Offer description Offer description</string>
     <string name="offers_price">22.00 KWD</string>
     <string name="offers_fake_price">22.00 KWD</string>
+
+    <!--myorders-->
+
     <string name="rateus">RATE US</string>
     <string name="reorder">REORDER</string>
     <string name="name">Abd El Maaboud</string>
@@ -82,15 +88,26 @@
     <string name="order_id">Order ID:</string>
     <string name="order_id_num">1021452</string>
     <string name="successful">Successful</string>
+
+    <!--cart-->
+
     <string name="cart">Cart</string>
+    <string name="datesstreet">Dates Street</string>
+    <string name="placeareaname">Place area name</string>
     <string name="itemprice">Item Price: </string>
     <string name="itemkd"> KWD 10.00</string>
     <string name="total">Total: </string>
     <string name="tota">Total</string>
     <string name="Quantity">Quantity</string>
+    <string name="additem">ADD ITEM</string>
+    <string name="checkoutt">CHECKOUT</string>
+
+<!--order setails-->
+
     <string name="orderdet_title">Order Details</string>
     <string name="deleveryadd">Delivery Address</string>
     <string name="hazem">Hazem Anwar</string>
+    <string name="address">123,KUWAIT CITY,BUILDING NUMBER 2.KUWAIT.</string>
     <string name="ordersum_title">Order Summary</string>
     <string name="subtot">Subtotal</string>
     <string name="os_kwd"> KWD 132.00</string>
@@ -103,6 +120,9 @@
     <string name="del_time">Delivery Time</string>
     <string name="timee">45 min</string>
     <string name="arab_coffee">Arabian Coffee</string>
+
+    <!--product details-->
+
     <string name="Agwadates">Agwa Dates - Dates Street</string>
     <string name="addtowish">ADD TO WISHLIST</string>
     <string name="addtocart">ADD TO CART</string>
@@ -114,6 +134,9 @@
     <string name="txtbullewtstatus">\u2022 Status</string>
     <string name="bethe">Be the first to review this product</string>
     <string name="writerev">WRITE A REVIEW</string>
+
+    <!--checkout-->
+
     <string name="placeorder">PLACE ORDER</string>
     <string name="change">CHANGE</string>
     <string name="Alname">Abd El Maaboud</string>
@@ -144,7 +167,7 @@
 
     <string-array name="theme_array">
 
-        <item>select</item>
+        <item>Select Your Area</item>
         <item>Black</item>
         <item>White</item>
 

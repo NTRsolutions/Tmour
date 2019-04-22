@@ -2,6 +2,7 @@ package tmour.sismatix.com.tmour.Activity;
 
 import android.app.Activity;
 import android.content.res.AssetManager;
+import android.content.res.Configuration;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -63,6 +64,7 @@ public class Navigation_drawer_activity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_navigation_drawer);
         Allocate_MEMORY();
+        //lang_arbi();
         SET_FONT_STYLE();
         setSupportActionBar(toolbar);
         setFont_family_to_Menu();
@@ -88,6 +90,15 @@ public class Navigation_drawer_activity extends AppCompatActivity
                 }
             }
         });
+    }
+
+    private void lang_arbi() {
+        String languageToLoad = "ar";
+        Locale locale = new Locale(languageToLoad);
+        Locale.setDefault(locale);
+        Configuration config = new Configuration();
+        config.locale = locale;
+        getBaseContext().getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
     }
 
     private void applyFontToMenuItem(MenuItem mi) {

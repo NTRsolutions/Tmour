@@ -69,14 +69,14 @@
                <LinearLayout
                    android:layout_width="match_parent"
                    android:layout_height="wrap_content"
-                   android:gravity="center|left"
+                   android:gravity="center"
                    android:layout_gravity="center"
                    android:layout_weight="0.3">
                    <TextView
                        android:id="@+id/tv_google"
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
-                       android:layout_marginLeft="10dp"
+                       android:textStyle="bold"
                        android:text="@string/sign_in_google"/>
                </LinearLayout>
            </LinearLayout>
@@ -107,7 +107,7 @@
                        android:layout_height="wrap_content"
                        android:text="@string/an_account"
                        android:textColor="@color/grey"
-                       android:textSize="16sp"
+                       android:textSize="18dp"
                        android:textStyle="bold" />
                </LinearLayout>
                <LinearLayout
@@ -177,7 +177,7 @@
                        android:padding="10dp"
                        android:text="@string/login"
                        android:textColor="@color/white"
-                       android:textSize="16sp"
+                       android:textSize="18dp"
                        android:textStyle="bold" />
 
                </LinearLayout>
@@ -202,7 +202,7 @@
                    android:padding="10dp"
                    android:text="@string/create_an_account"
                    android:textColor="@color/colorAccent"
-                   android:textSize="17sp"
+                   android:textSize="18dp"
                    android:textStyle="bold" />
 
            </LinearLayout>

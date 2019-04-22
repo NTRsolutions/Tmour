@@ -26,7 +26,6 @@
                 android:layout_width="110dp"
                 android:layout_height="110dp"
                 android:gravity="center"
-
                 android:background="@drawable/imageview_border"
                 android:orientation="vertical">
 

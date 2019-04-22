@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <string name="app_name">ورم</string><!--jate-->
+    <string name="navigation_drawer_open">فتح درج التنقل</string><!--jate-->
+    <string name="navigation_drawer_close">أغلق درج التنقل</string><!--jate-->
+    <string name="action_settings">الإعدادات</string><!--jate-->
+
+    <!--menu-->
+
+    <string name="hi_guest">مرحبا ضيف</string><!--jate-->
+    <string name="about_dates_street">عن شارع التمور</string><!--jate-->
+    <string name="Stores">مخازن</string><!--jate-->
+    <string name="Offers">عروض</string><!--jate-->
+    <string name="MyOrders">طلباتي</string><!--jate-->
+    <string name="Home">الصفحة الرئيسية</string><!--jate-->
+    <string name="home">الصفحة الرئيسية</string><!--jate-->
+    <string name="search">بحث</string><!--jate-->
+    <string name="product">منتجات</string><!--jate-->
+    <string name="my_cart">بلدي السلة</string><!--jate-->
+    <string name="favourite">المفضلة</string><!--jate-->
+    <string name="my_account">حسابي</string><!--jate-->
+    <string name="checkout">الدفع</string><!--jate-->
+    <string name="edit">تصحيح</string><!--jate-->
+
+    <!--login screen-->
+
+    <string name="sign_in_google" tools:ignore="ExtraTranslation">تسجيل الدخول بحساب جوجل</string>
+    <string name="an_account">ديك حساب خاص بك؟</string>
+    <string name="email">الإيميل</string>
+    <string name="password">كلمة السر</string>
+    <string name="login">الدخول لحسابك</string>
+    <string name="forgott_password">نسيت كلمة السر؟</string>
+    <string name="create_an_account">قم بإنشاء حساب</string>
+
+    <!--register-->
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <string name="confirm_password">أكيد كلمة السر</string>
+    <string name="firstname">الإسم الأول</string>
+    <string name="lastname">لإسم الأخير</string>
+    <string name="gender">الجنس (اختياري)</string><!--jate-->
+    <string name="male">الذكر</string><!--jate-->
+    <string name="female">إناثا</string><!--jate-->
+    <string name="date">تاريخ الميلاد (اختياري)</string><!--jate-->
+    <string name="receive_update">إستقبال كل ما هو جديد من عروض و خصومات.</string>
+    <string name="subscribe">لإشتراك بالنشرة البريدية</string>
+    <string name="privacy_policy">إنشاء حساب فإنك توافق على سياسة الخصوصية
+و شروط الاستخدام.</string>
+    <string name="create_account">أنشئ حسابك</string>
+    <string name="createaccount_small">أنشئ حسابك</string>
+    <string name="By_creating">By creating an account you agree to the</string>
+    <string name="privacy">Privacy Policy</string>
+
+    <!--Store page-->
+
+    <string name="find_store">عرض المتاجر</string>
+    <string name="categories">لمنتجات</string>
+    <string name="search_cap">بحث</string>
+    <string name="user_name">شارع التمور</string>
+    <string name="new_icon">ديد</string>
+    <string name="coffe">Coffee, Herbal Tea</string>
+    <string name="ten">(10)</string>
+    <string name="pay_by">طرق الدفع:</string>
+    <string name="cash">نقدي, الدفع اونلاين</string>
+    <string name="avg">متوسط:</string><!--jate-->
+    <string name="avg_min">45 min</string>
+    <string name="minimum">الحد الأدنى: 45.00 د.ك</string>
+    <string name="delivary_text">قيمة التوصيل:5.00 د.ك</string>
+    <string name="area_name_placed">اسم المنطقة وضعت هنا</string><!--jate-->
+
+    <!--search-->
+
+    <string name="search_area">منطقة البحث</string><!--jate-->
+
+    <!--offers-->
+
+    <string name="offers">العروض</string>
+    <string name="offers_disc">30% خصم على تمر العجوة</string>
+    <string name="offers_desc">تفاصيل عن العرض  تفاصيل عن العرض تفاصيل عن العرض تفاصيل
+عن العرض تفاصيل عن العرض </string>
+    <string name="offers_price">22 د.ك</string>
+    <string name="offers_fake_price">22 د.ك</string>
+
+    <!--myorders-->
+
+    <string name="rateus">تقييم الطلب</string>
+    <string name="reorder">إعادة الطلب</string>
+    <string name="name">شارع التمور</string>
+    <string name="order_date">17 فبراير، 2019</string>
+    <string name="time">      17:20 مساءاً</string>
+    <string name="order_id">كود الطلب:</string>
+    <string name="order_id_num">1021452</string>
+    <string name="successful">تم التوصيل</string>
+
+    <!--cart-->
+
+    <string name="cart">عربة التسوق</string><!--jateعربة التسوق-->
+    <string name="datesstreet">شارع التمور</string>
+    <string name="placeareaname">اسم منطقة المتجر</string>
+    <string name="itemprice">سعر المنتج:</string>
+    <string name="itemkd">  10.00د.ك</string>
+    <string name="total">الإجمالي:</string>
+    <string name="tota">Total</string>
+    <string name="Quantity">الكمية</string>
+    <string name="additem">أضف منتج</string>
+    <string name="checkoutt">إتمام الطلب</string><!--wrong--><!--Complete the application-->
+
+    <!--order details-->
+
+    <string name="orderdet_title">تفاصيل الطلب</string>
+    <string name="deleveryadd">عنوان الشحن</string>
+    <string name="hazem">حازم أنور</string>
+    <string name="address">رقم العقار، اسم الشارع
+البلد، المدينة.</string>
+    <string name="ordersum_title">ملخص الطلب</string>
+    <string name="subtot">الإجمالي</string>
+    <string name="os_kwd"> KWD 132.00</string>
+    <string name="os_disc_kwd"> KWD 2.00</string>
+    <string name="discount">لخصم</string>
+    <string name="ser_ch">خدمة التوصيل</string>
+    <string name="vat">لضريبة</string>
+    <string name="pay_meth">طريقة الدفع</string>
+    <string name="cashh">نقدي</string>
+    <string name="del_time">مدة التوصيل</string>
+    <string name="timee">45 دقيقة</string>
+    <string name="arab_coffee">قهود عربية</string>
+
+    <!--product details-->
+
+    <string name="Agwadates">شارع التمور- تمر العجوة</string>
+    <string name="addtowish">أضف إلى قائمة الأمنيات</string>
+    <string name="addtocart">أضف إلى سلة الشراء</string>
+    <string name="wishlist">قائمة الأمنيات</string>
+    <string name="share">مشاركة</string>
+    <string name="add_det">تفاصيل إضافية</string>
+    <string name="dummydate">وهي من أكثر أنواع التمر المشهورة عالمياً والتي يأتي تصنيفها الأول من حيث الشهرة والانتشار في دول العالم، والتي تتميز بمزيج من الليونة والجفاف كما أنها تتميز بشدة حلاوتها. </string>
+    <string name="txtbullewtstore">\u2022 المتجر:</string>
+    <string name="txtbullewtstatus">\u2022 الحالة:</string>
+    <string name="bethe">كن أول من يقيم هذا المنتج</string>
+    <string name="writerev">قيم المنتج الآن</string><!--wrong it is write a review and translation is rate now-->
+
+    <!--checkout-->
+
+    <string name="placeorder">أطلب الأن</string>
+    <string name="change">تغيي</string>
+    <string name="Alname">شارع التمور</string><!--wrong it is cust name and translation is street dates-->
+    <string name="voucher">كود القسيمة</string>
+    <string name="redeem">تطبيق الكود</string><!--wrong it is redeem and translation is application code-->
+    <string name="disc_vou">قسيمة الشراء</string>
+    <string name="paywith">طريقة الدفع</string>
+    <string name="del_free">قيمة الشحن</string><!--wrong it is delivery free and translation is shipping value-->
+
+    <!--Store info-->
+
+    <string name="store">معلومات عن المتجر</string>
+    <string name="productname">شارع التمور</string>
+    <string name="orderdetails">تفاصيل الطلبيات</string>
+    <string name="deliverytime">مدة التوصيل</string>
+    <string name="minimumorder">الحد الأدنى للطلب</string>
+    <string name="servicecharge">رسوم خدمة التوصيل</string>
+    <string name="preorder">طلبيات بحجز مسبق</string>
+    <string name="othersinfos">معلومات إضافية</string>
+    <string name="storearea">موقع المتجر</string>
+    <string name="openinghours">مواعيد المتجر</string>
+    <string name="minute">40 دقيقة</string>
+    <string name="five">5</string>
+    <string name="see_cart">انظر كارت</string>
+    <string name="total_cart">المجموع دينار كويتي</string>
+    <string name="price_cart">102.00</string>
+    <string name="data_not_found">لم يتم العثور على بيانات</string>
+
+    <string-array name="theme_array">
+
+        <item>أختر منطقتك</item><!--wrong it is select area and translation is select your region--><!--jate-->
+        <item>أسود</item><!--jate-->
+        <item>أبيض</item><!--jate-->
+
+    </string-array>
+
+</resources>

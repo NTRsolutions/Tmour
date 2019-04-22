@@ -30,7 +30,7 @@ import tmour.sismatix.com.tmour.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class Product_freg extends Fragment implements ViewPager.OnPageChangeListener, TabLayout.OnTabSelectedListener{
+public class Product_freg extends Fragment implements ViewPager.OnPageChangeListener, TabLayout.OnTabSelectedListener {
 
     AppBarLayout appbar_product;
     CollapsingToolbarLayout collapsing_toolbar;
@@ -53,22 +53,19 @@ public class Product_freg extends Fragment implements ViewPager.OnPageChangeList
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        view =  inflater.inflate(R.layout.fragment_product_freg, container, false);
+        view = inflater.inflate(R.layout.fragment_product_freg, container, false);
 
         Allocate_Memory(view);
         ((AppCompatActivity) getActivity()).setSupportActionBar(toolbar_product);
 
         setHasOptionsMenu(true);
-
         ((Navigation_drawer_activity) getActivity()).setSupportActionBar(toolbar_product);
         ((Navigation_drawer_activity) getActivity()).getSupportActionBar()
                 .setDisplayHomeAsUpEnabled(true);
 
-        /*collapsing_toolbar.setTitle(getResources().getString(R.string.dates_street));
+        collapsing_toolbar.setTitle(getResources().getString(R.string.datesstreet));
         collapsing_toolbar.setCollapsedTitleTypeface(Navigation_drawer_activity.roboto_bold);
-        collapsing_toolbar.setExpandedTitleTypeface(Navigation_drawer_activity.roboto_bold);*/
-
-        //setUpTabs();
+        collapsing_toolbar.setExpandedTitleTypeface(Navigation_drawer_activity.roboto_bold);
 
         category_list = new ArrayList<>();
 

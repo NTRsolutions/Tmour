@@ -47,8 +47,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
                 android:layout_marginTop="10dp"
-                android:text="Dates Street"
+                android:text="@string/datesstreet"
                 android:textColor="@color/black"
                 android:textSize="18dp"
                 android:textStyle="bold" />
@@ -58,7 +59,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="20dp"
-                android:text="Place area name"
+                android:layout_marginRight="20dp"
+                android:text="@string/placeareaname"
                 android:textColor="@color/light_greyy"
                 android:textSize="14dp"
                 android:textStyle="bold" />
@@ -135,8 +137,9 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
                             android:gravity="center"
-                            android:text="Subtotal"
+                            android:text="@string/subtot"
                             android:textColor="@color/black"
                             android:textSize="16dp"
                             android:textStyle="bold" />
@@ -208,7 +211,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:gravity="center"
-                                android:text="ADD ITEM"
+                                android:text="@string/additem"
                                 android:textColor="@color/colorPrimary"
                                 android:textSize="16dp"
                                 android:textStyle="bold" />
@@ -236,8 +239,9 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="CHECKOUT"
+                                android:text="@string/checkoutt"
                                 android:textColor="@color/white"
+                                android:textAllCaps="true"
                                 android:textSize="16dp"
                                 android:textStyle="bold" />
                         </LinearLayout>
