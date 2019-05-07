@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:layout_marginTop="?attr/actionBarSize"
     android:layout_marginBottom="?attr/actionBarSize"
-    tools:context=".Fregment.Offers_freg">
+    tools:context="com.sismatix.tmour.Fregment.Offers_freg">
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recycler_offers"

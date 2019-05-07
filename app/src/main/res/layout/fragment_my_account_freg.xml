@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fregment.My_account_freg">
+    tools:context="com.sismatix.tmour.Fregment.My_account_freg">
 
 
 

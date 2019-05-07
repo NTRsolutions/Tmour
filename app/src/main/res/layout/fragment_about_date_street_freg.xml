@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fregment.About_date_street_freg">
+    tools:context="com.sismatix.tmour.Fregment.About_date_street_freg">
 
 
 

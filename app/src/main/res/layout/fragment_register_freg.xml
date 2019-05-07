@@ -7,7 +7,7 @@
     android:background="@color/white"
     android:orientation="vertical"
     android:layout_marginBottom="?attr/actionBarSize"
-    tools:context=".Fregment.Register_freg">
+    tools:context="com.sismatix.tmour.Fregment.Register_freg">
 
     <LinearLayout
         android:layout_width="match_parent"

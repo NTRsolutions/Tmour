@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:layout_marginBottom="?attr/actionBarSize"
     android:orientation="vertical"
-    tools:context=".Fregment.ProductDetails">
+    tools:context="com.sismatix.tmour.Fregment.ProductDetails">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -67,10 +67,16 @@
                             android:orientation="vertical">
 
                             <ImageView
-                                android:id="@+id/iv_order"
+                                android:id="@+id/iv_main"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:src="@drawable/prod_details_main" />
+
+                            <!--<android.support.v4.view.ViewPager
+                                android:id="@+id/view_pager"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                            </android.support.v4.view.ViewPager>-->
 
                         </LinearLayout>
                     </LinearLayout>
@@ -78,6 +84,7 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:id="@+id/lv_oooo"
                         android:orientation="horizontal">
 
                         <android.support.v7.widget.RecyclerView

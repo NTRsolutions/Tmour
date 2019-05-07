@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:layout_marginBottom="?attr/actionBarSize"
     android:orientation="vertical"
-    tools:context=".Fregment.Cart_freg">
+    tools:context="com.sismatix.tmour.Fregment.Cart_freg">
 
     <LinearLayout
         android:layout_width="match_parent"

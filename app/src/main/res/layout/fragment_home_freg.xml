@@ -6,7 +6,7 @@
     android:layout_marginTop="?attr/actionBarSize"
     android:layout_marginBottom="?attr/actionBarSize"
     android:orientation="vertical"
-    tools:context=".Fregment.Home_freg">
+    tools:context="com.sismatix.tmour.Fregment.Home_freg">
 
     <ScrollView
         android:layout_width="match_parent"

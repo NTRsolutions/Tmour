@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Fregment.Login_freg">
+    tools:context="com.sismatix.tmour.Fregment.Login_freg">
 
     <LinearLayout
         android:layout_width="match_parent"

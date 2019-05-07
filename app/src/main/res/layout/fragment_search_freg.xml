@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/white"
     android:orientation="vertical"
-    tools:context=".Fregment.Search_freg">
+    tools:context="com.sismatix.tmour.Fregment.Search_freg">
 
     <LinearLayout
         android:layout_width="match_parent"
