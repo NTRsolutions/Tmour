@@ -1,6 +1,5 @@
 package com.sismatix.tmour.Fregment;
 
-
 import android.app.Activity;
 import android.os.Build;
 import android.os.Bundle;
