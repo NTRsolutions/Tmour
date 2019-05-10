@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "488543119654",
+    "firebase_url": "https://tmourlogin.firebaseio.com",
+    "project_id": "tmourlogin",
+    "storage_bucket": "tmourlogin.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:488543119654:android:7a75ea4b231406ae",
+        "android_client_info": {
+          "package_name": "com.sismatix.tmour"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "488543119654-r24gsbanupecbn45d5feh688v5na3l44.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sismatix.tmour",
+            "certificate_hash": "17968186fcde9c6359351622d46ddc1d5f60a8ef"
+          }
+        },
+        {
+          "client_id": "488543119654-6qdfnuvvsf7p7o0jvgnftj56bf16sbnq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDMwByAkt7E87I45a4tkhnBdXkElVVfmos"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "488543119654-6qdfnuvvsf7p7o0jvgnftj56bf16sbnq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

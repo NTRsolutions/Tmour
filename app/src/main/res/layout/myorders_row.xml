@@ -160,8 +160,20 @@
                             android:id="@+id/tv_order_status"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:text="Cancelled"
+                            android:text="@string/Cancelled"
                             android:gravity="end"
+                            android:layout_marginRight="20dp"
+                            android:textColor="@color/black"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_order_sucess"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/Successful"
+                            android:gravity="end"
+                            android:visibility="gone"
                             android:layout_marginRight="20dp"
                             android:textColor="@color/black"
                             android:textSize="16dp"

@@ -6,6 +6,7 @@
     android:layout_marginTop="?attr/actionBarSize"
     android:layout_marginBottom="?attr/actionBarSize"
     android:orientation="vertical"
+    android:background="@color/white"
     tools:context=".Fregment.OrderDetails">
 
     <ScrollView

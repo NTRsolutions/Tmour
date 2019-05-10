@@ -8,17 +8,39 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="horizontal"
+        android:padding="5dp">
 
         <RadioButton
             android:id="@+id/rad_payment"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Cash on delivery"
+            android:text=""
             android:textColor="@color/black"
             android:buttonTint="@color/black"
             android:textStyle="bold"
             android:textSize="14sp" />
+        <LinearLayout
+            android:layout_width="30dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_height="30dp"
+            android:padding="3dp">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/payment"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Credit card"
+            android:layout_marginRight="5dp"
+            android:textSize="14sp"
+            android:layout_marginLeft="5dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
 
     </LinearLayout>
 

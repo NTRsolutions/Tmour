@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     android:layout_marginBottom="?attr/actionBarSize"
     android:orientation="vertical"
+    android:background="@color/white"
     tools:context=".Fregment.ProductDetails">
 
     <LinearLayout
@@ -250,7 +251,7 @@
                                 android:orientation="horizontal">
 
                                 <ImageView
-                                    android:id="@+id/iv_cart_quantity_increase"
+                                    android:id="@+id/iv_pdetail_quantity_increase"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginLeft="10dp"
@@ -272,7 +273,7 @@
                                         android:gravity="center">
 
                                         <TextView
-                                            android:id="@+id/tv_cart_quantity_total"
+                                            android:id="@+id/tv_pdetail_quantity_total"
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:text="3"
@@ -290,7 +291,7 @@
                                 </LinearLayout>
 
                                 <ImageView
-                                    android:id="@+id/iv_cart_quantity_decrease"
+                                    android:id="@+id/iv_pdetail_quantity_decrease"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginLeft="10dp"

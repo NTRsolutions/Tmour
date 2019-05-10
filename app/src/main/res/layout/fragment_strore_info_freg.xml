@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:layout_marginBottom="?attr/actionBarSize"
     android:orientation="vertical"
-    tools:context=".Fregment.Strore_info_freg">
+    tools:context="com.sismatix.tmour.Fregment.Strore_info_freg">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -53,6 +53,7 @@
                     android:src="@drawable/myorders_dates" />
 
                 <TextView
+                    android:id="@+id/tv_dates_main_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
@@ -68,10 +69,12 @@
                 android:background="@color/background">
 
                 <TextView
+                    android:id="@+id/tv_ordering_det_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="15dp"
                     android:text="@string/orderdetails"
+                    android:textColor="@color/grey"
                     android:textStyle="bold" />
             </LinearLayout>
 
@@ -98,6 +101,7 @@
                     <ImageView
                         android:layout_width="45dp"
                         android:layout_height="45dp"
+                        android:padding="3dp"
                         android:src="@drawable/deliverytime" />
                 </LinearLayout>
 
@@ -110,14 +114,16 @@
                     android:orientation="vertical">
 
                     <TextView
+                        android:id="@+id/tv_delivery_time_tile"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/deliverytime"
-                        android:textColor="@color/edittextline"
+                        android:textColor="@color/grey"
                         android:textSize="18dp"
                         android:textStyle="bold" />
 
                     <TextView
+                        android:id="@+id/tv_del_time"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
@@ -151,6 +157,7 @@
                     <ImageView
                         android:layout_width="45dp"
                         android:layout_height="45dp"
+                        android:padding="3dp"
                         android:src="@drawable/minimumorder" />
                 </LinearLayout>
 
@@ -163,14 +170,16 @@
                     android:orientation="vertical">
 
                     <TextView
+                        android:id="@+id/tv_min_order_title"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/minimumorder"
-                        android:textColor="@color/edittextline"
+                        android:textColor="@color/grey"
                         android:textSize="18dp"
                         android:textStyle="bold" />
 
                     <TextView
+                        android:id="@+id/tv_min_order"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
@@ -203,6 +212,7 @@
                     <ImageView
                         android:layout_width="45dp"
                         android:layout_height="45dp"
+                        android:padding="3dp"
                         android:src="@drawable/servicecharge" />
                 </LinearLayout>
 
@@ -215,14 +225,16 @@
                     android:orientation="vertical">
 
                     <TextView
+                        android:id="@+id/tv_service_ch_title"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/servicecharge"
-                        android:textColor="@color/edittextline"
+                        android:textColor="@color/grey"
                         android:textSize="18dp"
                         android:textStyle="bold" />
 
                     <TextView
+                        android:id="@+id/tv_service_ch"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
@@ -256,6 +268,7 @@
                     <ImageView
                         android:layout_width="45dp"
                         android:layout_height="45dp"
+                        android:padding="3dp"
                         android:src="@drawable/preorder" />
                 </LinearLayout>
 
@@ -268,14 +281,16 @@
                     android:orientation="vertical">
 
                     <TextView
+                        android:id="@+id/tv_preorder_title"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/preorder"
-                        android:textColor="@color/edittextline"
+                        android:textColor="@color/grey"
                         android:textSize="18dp"
                         android:textStyle="bold" />
 
                     <TextView
+                        android:id="@+id/tv_preorder"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
@@ -297,10 +312,12 @@
                 android:background="@color/background">
 
                 <TextView
+                    android:id="@+id/tv_other_info"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="15dp"
                     android:text="@string/othersinfos"
+                    android:textColor="@color/grey"
                     android:textStyle="bold" />
             </LinearLayout>
 
@@ -327,6 +344,7 @@
                     <ImageView
                         android:layout_width="45dp"
                         android:layout_height="45dp"
+                        android:padding="3dp"
                         android:src="@drawable/storearea" />
                 </LinearLayout>
 
@@ -339,14 +357,16 @@
                     android:orientation="vertical">
 
                     <TextView
+                        android:id="@+id/tv_store_area_title"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/storearea"
-                        android:textColor="@color/edittextline"
+                        android:textColor="@color/grey"
                         android:textSize="18dp"
                         android:textStyle="bold" />
 
                     <TextView
+                        android:id="@+id/tv_store_area"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
@@ -380,6 +400,7 @@
                     <ImageView
                         android:layout_width="45dp"
                         android:layout_height="45dp"
+                        android:padding="3dp"
                         android:src="@drawable/openinghours" />
                 </LinearLayout>
 
@@ -392,14 +413,16 @@
                     android:orientation="vertical">
 
                     <TextView
+                        android:id="@+id/tv_opening_hour_title"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/openinghours"
-                        android:textColor="@color/edittextline"
+                        android:textColor="@color/grey"
                         android:textSize="18dp"
                         android:textStyle="bold" />
 
                     <TextView
+                        android:id="@+id/tv_opening_hour"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"

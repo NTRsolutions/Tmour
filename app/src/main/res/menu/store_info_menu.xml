@@ -16,9 +16,7 @@
         android:icon="@drawable/ic_info_black_24dp"
         android:title="information"
         app:showAsAction="always"
-        android:iconTint="@color/white"
-        android:iconTintMode="@color/white"
-        tools:ignore="AppCompatResource"
+         tools:ignore="AppCompatResource"
         android:visible="true"/>
 
     <item

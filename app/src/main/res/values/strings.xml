@@ -164,12 +164,21 @@
     <string name="total_cart">TOTAL KWD</string>
     <string name="price_cart">102.00</string>
     <string name="data_not_found">DATA NOT FOUND</string>
+    <string name="Successful">Successful</string>
+    <string name="Cancelled">Cancelled</string>
 
     <string-array name="theme_array">
 
         <item>Select Your Area</item>
         <item>Black</item>
         <item>White</item>
+
+    </string-array>
+    <string-array name="language_array">
+
+        <item>Select</item>
+        <item>English</item>
+        <item>Arabic</item>
 
     </string-array>
 
