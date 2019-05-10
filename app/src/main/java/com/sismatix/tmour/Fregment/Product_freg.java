@@ -38,7 +38,7 @@ public class Product_freg extends Fragment implements ViewPager.OnPageChangeList
     CollapsingToolbarLayout collapsing_toolbar;
     Toolbar toolbar;
     ImageView iv_product_header;
-    android.support.v7.widget.Toolbar toolbar_product;
+    Toolbar toolbar_product;
     View view;
     TabLayout tabs;
     ViewPager pager;
@@ -167,7 +167,7 @@ public class Product_freg extends Fragment implements ViewPager.OnPageChangeList
         appbar_product = (AppBarLayout) view.findViewById(R.id.appbar_product);
         collapsing_toolbar = (CollapsingToolbarLayout) view.findViewById(R.id.collapse_toolbar);
         iv_product_header = (ImageView) view.findViewById(R.id.iv_product_header);
-        toolbar_product = (android.support.v7.widget.Toolbar) view.findViewById(R.id.toolbar_product);
+        toolbar_product = (Toolbar) view.findViewById(R.id.toolbar_product);
         tabs = (TabLayout) view.findViewById(R.id.tabs);
     }
 
@@ -191,6 +191,8 @@ public class Product_freg extends Fragment implements ViewPager.OnPageChangeList
 
         super.onCreateOptionsMenu(menu, inflater);
     }
+
+
     private void pushFragment(Fragment fragment, String add_to_backstack) {
         if (fragment == null)
             return;
@@ -204,6 +206,7 @@ public class Product_freg extends Fragment implements ViewPager.OnPageChangeList
             }
         }
     }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle item selection
@@ -213,7 +216,7 @@ public class Product_freg extends Fragment implements ViewPager.OnPageChangeList
                 //Toast.makeText(getActivity(), "cart Icon Click", Toast.LENGTH_SHORT).show();
                 return true;
             case R.id.search_menu:
-                pushFragment(new Search_freg(),"search");
+                pushFragment(new Search_freg(),"store info");
 
                 return true;
             case android.R.id.home:

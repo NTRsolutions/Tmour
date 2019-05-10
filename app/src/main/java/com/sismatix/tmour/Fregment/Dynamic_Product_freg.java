@@ -46,7 +46,7 @@ public class Dynamic_Product_freg extends Fragment {
 
     private Library_adapter adapter;
     private String category_id, category_title;
-    private ProgressBar progressBar_library, progressBar_bottom_library;
+    private ProgressBar progressBar_library,progressBar_bottom_library;
     private TextView tvNoDataFound;
 
     private boolean isVisible;
@@ -56,7 +56,7 @@ public class Dynamic_Product_freg extends Fragment {
     NestedScrollView nested_scroll_library;
     WrapContentLinearLayoutManager layoutManager;
     //varible for pagination
-    int page_no = 1, page;
+    int page_no=1,page;
 
     public static Dynamic_Product_freg newInstance(String sectionNumber, boolean visible, String category_title) {
         Dynamic_Product_freg fragment = new Dynamic_Product_freg();
@@ -96,13 +96,14 @@ public class Dynamic_Product_freg extends Fragment {
             Log.e("service_else_143", "" + cat_id_list.get(i));
 
             if (CheckNetwork.isNetworkAvailable(getActivity())) {
-                CALL_product_LIST_API(cat_id_list.get(i), page_no);
+                CALL_product_LIST_API(cat_id_list.get(i),page_no);
             } else {
                 Toast.makeText(getActivity(), "Please Check your Internet Connection", Toast.LENGTH_SHORT).show();
             }
 
         }
         cat_id_list.clear();
+
     }
 
     private void CALL_product_LIST_API(String category_id1, int page_no) {
@@ -112,13 +113,13 @@ public class Dynamic_Product_freg extends Fragment {
 
         ApiInterface api = ApiClient.getClient().create(ApiInterface.class);
         Call<ResponseBody> get_library_list = api.get_library_list(String.valueOf(page_no), ApiClient.PER_PAGE, category_id1, ApiClient.user_status);
-        page = page_no;
+        page=page_no;
         Log.e("page_140", "" + page);
 
         get_library_list.enqueue(new Callback<ResponseBody>() {
             @Override
             public void onResponse(@NonNull Call<ResponseBody> call, @NonNull Response<ResponseBody> response) {
-                Log.e(" ", "" + response.body().toString());
+                Log.e("response ", "" + response.body().toString());
                 progressBar_library.setVisibility(View.GONE);
 
                 try {
@@ -158,10 +159,10 @@ public class Dynamic_Product_freg extends Fragment {
                             }
 
                             adapter = new Library_adapter(getActivity(), itemArrayList);
-                            layoutManager = new WrapContentLinearLayoutManager(getActivity());
+                            layoutManager=new WrapContentLinearLayoutManager(getActivity());
                             recycler_product_list.setLayoutManager(layoutManager);
                             recycler_product_list.setAdapter(adapter);
-                            Log.e("model_size_200", "" + itemArrayList.size());
+                            Log.e("model_size_200",""+itemArrayList.size());
                             if (itemArrayList.size() == 0) {
                                 tvNoDataFound.setVisibility(View.VISIBLE);
                             } else {
@@ -179,7 +180,7 @@ public class Dynamic_Product_freg extends Fragment {
                     e.printStackTrace();
                     progressBar_library.setVisibility(View.GONE);
                     Log.e("exception", "" + e.getLocalizedMessage());
-                    Toast.makeText(getActivity(), "" + e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+                  //  Toast.makeText(getActivity(), "" + e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
                     //  Utils.showErrorSnackBar(getView().getRootView(), e.getLocalizedMessage(), Snackbar.LENGTH_SHORT);
                 }
             }
@@ -187,7 +188,7 @@ public class Dynamic_Product_freg extends Fragment {
             @Override
             public void onFailure(@NonNull Call<ResponseBody> call, @NonNull Throwable t) {
                 progressBar_library.setVisibility(View.GONE);
-                Toast.makeText(getActivity(), "" + t.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+               // Toast.makeText(getActivity(), "" + t.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
                 Log.e("Failure", "" + t.getLocalizedMessage());
             }
         });
@@ -204,7 +205,7 @@ public class Dynamic_Product_freg extends Fragment {
 
     }*/
 
-    public void lang_arbi() {
+    public  void lang_arbi() {
         String languageToLoad = "ar";
         Locale locale = new Locale(languageToLoad);
         Locale.setDefault(locale);
@@ -220,9 +221,9 @@ public class Dynamic_Product_freg extends Fragment {
         //progress bar
         progressBar_library = view.findViewById(R.id.progressBar_library);
         progressBar_bottom_library = view.findViewById(R.id.progressBar_bottom_library);
-        nested_scroll_library = (NestedScrollView) view.findViewById(R.id.nested_scroll_library);
+        nested_scroll_library =(NestedScrollView) view.findViewById(R.id.nested_scroll_library);
         //text view
         tvNoDataFound = view.findViewById(R.id.tv_data_not_found_library);
-    }
+        }
 
 }

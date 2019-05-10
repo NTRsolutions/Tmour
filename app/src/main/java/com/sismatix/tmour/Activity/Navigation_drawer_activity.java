@@ -107,7 +107,7 @@ public class Navigation_drawer_activity extends AppCompatActivity
         spinner = (Spinner) navigationView.getMenu().findItem(R.id.navigation_drawer_item3).getActionView();
         spinner.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, language));
 
-        spinner.setSelection(1,true);
+        //spinner.setSelection(1,true);
 
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -128,6 +128,8 @@ public class Navigation_drawer_activity extends AppCompatActivity
 
                 }else if(selected_value.equals("Arabic")==true){
                     lang_arbi();
+                    Log.e("selected_item_ara",""+selected_value);
+
                     Login_preference.set_Lang_flag(Navigation_drawer_activity.this,"0");
 
                     Intent intent = new Intent(Navigation_drawer_activity.this, Navigation_drawer_activity.class);
@@ -144,7 +146,6 @@ public class Navigation_drawer_activity extends AppCompatActivity
         });
 
     }
-
     private void lang_arbi() {
         String languageToLoad = "ar";
         Locale locale = new Locale(languageToLoad);
@@ -153,7 +154,6 @@ public class Navigation_drawer_activity extends AppCompatActivity
         config.locale = locale;
         getApplicationContext().getResources().updateConfiguration(config, getApplicationContext().getResources().getDisplayMetrics());
     }
-
     private void lang_english() {
         String languageToLoad = "en";
         Locale locale = new Locale(languageToLoad);

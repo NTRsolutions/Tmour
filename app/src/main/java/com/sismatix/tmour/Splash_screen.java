@@ -16,14 +16,15 @@ public class Splash_screen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(com.sismatix.tmour.R.layout.activity_splash);
 
-
         getApplicationContext().setTheme(android.R.style.Theme_Translucent_NoTitleBar_Fullscreen);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(com.sismatix.tmour.R.layout.activity_splash);
         //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         if(getSupportActionBar() != null) {
             getSupportActionBar().hide();
         }
+
         AppCompatDelegate.setCompatVectorFromResourcesEnabled(true);
         Login_preference.set_Lang_flag(Splash_screen.this,"1");
 
