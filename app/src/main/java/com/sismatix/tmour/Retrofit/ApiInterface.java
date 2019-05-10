@@ -306,6 +306,7 @@ public interface ApiInterface {
     @FormUrlEncoded
     Call<ResponseBody> Logout(@Field("user_id") String user_id);
 
-
+    @GET("json_data.json")
+    Call<ResponseBody> getimages();
 
 }
