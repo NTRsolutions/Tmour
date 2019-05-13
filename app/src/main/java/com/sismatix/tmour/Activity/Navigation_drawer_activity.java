@@ -2,10 +2,12 @@ package com.sismatix.tmour.Activity;
 
 import android.app.Activity;
 import android.app.NativeActivity;
+import android.content.Context;
 import android.content.Intent;
 import android.content.res.AssetManager;
 import android.content.res.Configuration;
 import android.graphics.Typeface;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.NonNull;
@@ -61,17 +63,23 @@ public class Navigation_drawer_activity extends AppCompatActivity
     NavigationView navigationView;
     public BottomNavigationView bottom_navigation;
     public static AssetManager am;
-    public static Typeface roboto_bold, roboto_black, roboto_bold_conndensed, roboto_light, roboto_regular, roboto_thin, roboto_medium, cairo_bold;
+    public static Typeface roboto_bold, roboto_black, roboto_bold_conndensed, roboto_light, roboto_regular, roboto_thin,
+            roboto_medium, cairo_bold,cairo_regular,cairo_semibold;
     boolean doubleBackToExitPressedOnce = false;
 
     ImageView iv_nav_setting, iv_nav_profile;
-    TextView tv_nav_username;
+    public  static TextView tv_nav_username,tv_nav_title;
     Spinner spinner;
     String[] language;
+    String lang_flag;
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_navigation_drawer);
+        lang_flag = Login_preference.get_Lang_flag(getApplicationContext());
         Allocate_MEMORY();
         //lang_arbi();
         SET_FONT_STYLE();
@@ -118,24 +126,30 @@ public class Navigation_drawer_activity extends AppCompatActivity
                 Log.e("selected_item",""+selected_value);
 
                 if(selected_value.equals("English")==true){
-                    lang_english();
-                    Login_preference.set_Lang_flag(Navigation_drawer_activity.this,"1");
+                  //  lang_english();
+                    changeLanguage(Navigation_drawer_activity.this,"en");
 
+
+                    Login_preference.set_Lang_flag(Navigation_drawer_activity.this,"1");
+/*
                     Intent intent = new Intent(Navigation_drawer_activity.this, Navigation_drawer_activity.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     startActivity(intent);
-                    drawer.closeDrawer(GravityCompat.START);
+                  */  drawer.closeDrawer(GravityCompat.START);
 
                 }else if(selected_value.equals("Arabic")==true){
-                    lang_arbi();
+                   // lang_arbi();
+
+                    changeLanguage(Navigation_drawer_activity.this,"ar");
+
                     Log.e("selected_item_ara",""+selected_value);
 
                     Login_preference.set_Lang_flag(Navigation_drawer_activity.this,"0");
-
+/*
                     Intent intent = new Intent(Navigation_drawer_activity.this, Navigation_drawer_activity.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     startActivity(intent);
-                    drawer.closeDrawer(GravityCompat.START);
+                  */  drawer.closeDrawer(GravityCompat.START);
 
                 }
             }
@@ -161,14 +175,43 @@ public class Navigation_drawer_activity extends AppCompatActivity
         Configuration config = new Configuration();
         config.locale = locale;
         getApplicationContext().getResources().updateConfiguration(config, getApplicationContext().getResources().getDisplayMetrics());
+
+        restartActivity();
+
     }
+    private void restartActivity() {
+        Intent intent = getIntent();
+        finish();
+        startActivity(intent);
+    }
+
+    public void changeLanguage(Context context, String language) {
+        Locale locale = new Locale(language);
+        Locale.setDefault(locale);
+        Configuration config = context.getResources().getConfiguration();
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
+            config.setLocale(locale);
+            context.createConfigurationContext(config);
+
+        }
+
+        context.getResources().updateConfiguration(config, context.getResources().getDisplayMetrics());
+
+        restartActivity();
+    }
+
+
     private void applyFontToMenuItem(MenuItem mi) {
-        Typeface font = Typeface.createFromAsset(getAssets(), "RobotoBold.ttf");
+        Typeface font;
+        if (lang_flag.equals("0")){
+            font = Typeface.createFromAsset(getAssets(), "cairobold.ttf");
+        }else {
+            font = Typeface.createFromAsset(getAssets(), "RobotoBold.ttf");
+        }
         SpannableString mNewTitle = new SpannableString(mi.getTitle());
         mNewTitle.setSpan(new CustomTypefaceSpan("", font), 0, mNewTitle.length(), Spannable.SPAN_INCLUSIVE_INCLUSIVE);
         mi.setTitle(mNewTitle);
     }
-
     private void setFont_family_to_Menu() {
 
         Menu menu = navigationView.getMenu();
@@ -214,8 +257,18 @@ public class Navigation_drawer_activity extends AppCompatActivity
         iv_nav_setting = (ImageView) header.findViewById(R.id.iv_nav_setting);
         iv_nav_profile = (ImageView) header.findViewById(R.id.iv_nav_profile);
         tv_nav_username = (TextView) header.findViewById(R.id.tv_nav_username);
+        tv_nav_title = (TextView) findViewById(R.id.tv_nav_title);
 
-        tv_nav_username.setTypeface(Navigation_drawer_activity.roboto_bold);
+
+        if (lang_flag.equals("0")){
+            tv_nav_username.setTypeface(Navigation_drawer_activity.cairo_bold);
+
+        }else {
+            tv_nav_username.setTypeface(Navigation_drawer_activity.roboto_bold);
+        }
+
+
+
         setSupportActionBar(toolbar);
         ActionBar actionbar = getSupportActionBar();
         actionbar.setDisplayHomeAsUpEnabled(true);
@@ -240,6 +293,10 @@ public class Navigation_drawer_activity extends AppCompatActivity
                 String.format(Locale.getDefault(), "RobotoRegular.ttf"));
         cairo_bold = Typeface.createFromAsset(am,
                 String.format(Locale.getDefault(), "cairobold.ttf"));
+        cairo_regular = Typeface.createFromAsset(am,
+                String.format(Locale.getDefault(), "CairoRegular.ttf"));
+        cairo_semibold = Typeface.createFromAsset(am,
+                String.format(Locale.getDefault(), "CairoSemiBold.ttf"));
 
     }
 
@@ -359,7 +416,7 @@ public class Navigation_drawer_activity extends AppCompatActivity
             pushFragment(new Store_freg(), "store");
 
         } else if (id == R.id.nav_about_datestreet) {
-            pushFragment(new About_date_street_freg(), "about");
+            pushFragment(new ProductDetails(), "about");
 
         }
 

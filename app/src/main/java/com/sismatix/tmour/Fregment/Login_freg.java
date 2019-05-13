@@ -35,6 +35,7 @@ import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.sismatix.tmour.Activity.Navigation_drawer_activity;
 import com.sismatix.tmour.CheckNetwork;
+import com.sismatix.tmour.Preference.Login_preference;
 import com.sismatix.tmour.R;
 
 /**
@@ -44,7 +45,7 @@ import com.sismatix.tmour.R;
 public class Login_freg extends Fragment implements View.OnClickListener, GoogleApiClient.OnConnectionFailedListener {
 
     View view;
-    TextView tv_create_account, tv_forgot_password, tv_login, tv_already_have_an_account, tv_google;
+    TextView tv_create_account,tv_login_to_title, tv_forgot_password, tv_login, tv_already_have_an_account, tv_google;
     TextInputLayout layout_login_email, layout_login_password;
     TextInputEditText et_password_login;
     EditText et_Email_login;
@@ -55,6 +56,7 @@ public class Login_freg extends Fragment implements View.OnClickListener, Google
     public static final int SIGN_IN_CODE = 777;
     String gname, gid, gemail, gphoto;
     String googlefirstname, googlelastname, googlemiddlename, locationid_wish;
+    String lang_flag;
 
     public Login_freg() {
         // Required empty public constructor
@@ -66,24 +68,53 @@ public class Login_freg extends Fragment implements View.OnClickListener, Google
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_login_freg, container, false);
+        lang_flag = Login_preference.get_Lang_flag(getContext());
 
         AllocateMemory(view);
         setupUI(linear_parent);
         setHasOptionsMenu(true);
+        setTypface();
 
-        Navigation_drawer_activity.changeToolbarFont(toolbar_login,getActivity());
-
-        toolbar_login.setTitle(getResources().getString(R.string.login));
+      //  Navigation_drawer_activity.changeToolbarFont(toolbar_login,getActivity());
+        tv_login_to_title.setText(getResources().getString(R.string.login));
+        // toolbar_login.setTitle(getResources().getString(R.string.login));
         ((Navigation_drawer_activity) getActivity()).setSupportActionBar(toolbar_login);
         ((Navigation_drawer_activity) getActivity()).getSupportActionBar()
                 .setDisplayHomeAsUpEnabled(true);
+
+
+
 
         tv_create_account.setOnClickListener(this);
 
         GOOGLE_LOGIN();
 
 
+
         return view;
+    }
+
+    private void setTypface() {
+        if (lang_flag.equals("0")){
+            tv_already_have_an_account.setTypeface(Navigation_drawer_activity.cairo_bold);
+            tv_forgot_password.setTypeface(Navigation_drawer_activity.cairo_bold);
+            tv_login.setTypeface(Navigation_drawer_activity.cairo_bold);
+            tv_create_account.setTypeface(Navigation_drawer_activity.cairo_bold);
+            tv_google.setTypeface(Navigation_drawer_activity.cairo_bold);
+            layout_login_email.setTypeface(Navigation_drawer_activity.cairo_bold);
+            layout_login_password.setTypeface(Navigation_drawer_activity.cairo_bold);
+            tv_login_to_title.setTypeface(Navigation_drawer_activity.cairo_bold);
+        }else {
+            tv_already_have_an_account.setTypeface(Navigation_drawer_activity.roboto_bold);
+            tv_forgot_password.setTypeface(Navigation_drawer_activity.roboto_regular);
+            tv_login.setTypeface(Navigation_drawer_activity.roboto_bold);
+            tv_create_account.setTypeface(Navigation_drawer_activity.roboto_bold);
+            tv_google.setTypeface(Navigation_drawer_activity.roboto_bold);
+            layout_login_email.setTypeface(Navigation_drawer_activity.roboto_regular);
+            layout_login_password.setTypeface(Navigation_drawer_activity.roboto_regular);
+            tv_login_to_title.setTypeface(Navigation_drawer_activity.roboto_bold);
+        }
+
     }
 
     private void GOOGLE_LOGIN() {
@@ -144,6 +175,7 @@ public class Login_freg extends Fragment implements View.OnClickListener, Google
         tv_login = (TextView) view.findViewById(R.id.tv_login);
         tv_create_account = (TextView) view.findViewById(R.id.tv_create_account);
         tv_google = (TextView) view.findViewById(R.id.tv_google);
+        tv_login_to_title = (TextView) view.findViewById(R.id.tv_login_to_title);
 
         linear_parent = (LinearLayout) view.findViewById(R.id.linear_parent);
         google_login = (LinearLayout) view.findViewById(R.id.google_login);

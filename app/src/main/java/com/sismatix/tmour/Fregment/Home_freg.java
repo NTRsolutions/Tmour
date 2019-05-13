@@ -26,7 +26,7 @@ import com.sismatix.tmour.R;
  * A simple {@link Fragment} subclass.
  */
 
-public class Home_freg extends Fragment {
+public class Home_freg extends Fragment implements View.OnClickListener {
     Spinner spinner_home_area;
     ImageView iv_home_location;
     LinearLayout lv_location_home,lv_home_find_store,lv_home_login;
@@ -44,20 +44,30 @@ public class Home_freg extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_home_freg, container, false);
-        setHasOptionsMenu(true);
-        Navigation_drawer_activity.toolbar.setTitle("");
-        Allocate_Memory(view);
         lang_flag=Login_preference.get_Lang_flag(getActivity());
+        Allocate_Memory(view);
+        setHasOptionsMenu(true);
+
+        Navigation_drawer_activity.toolbar.setTitle("");
+        Navigation_drawer_activity.tv_nav_title.setVisibility(View.GONE);
         Log.e("login_51 ",""+lang_flag);
 
-        lv_home_login.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                pushFragment(new Login_freg(),"login");
-            }
-        });
+        setTypeface();
+        lv_home_login.setOnClickListener(this);
+
 
         return view;
+    }
+
+    private void setTypeface() {
+        if (lang_flag.equals("0")){
+            tv_find_store.setTypeface(Navigation_drawer_activity.cairo_bold);
+            tv_home_login.setTypeface(Navigation_drawer_activity.cairo_bold);
+        }else {
+            tv_find_store.setTypeface(Navigation_drawer_activity.roboto_bold);
+            tv_home_login.setTypeface(Navigation_drawer_activity.roboto_bold);
+        }
+
     }
 
     private void Allocate_Memory(View view) {
@@ -69,10 +79,6 @@ public class Home_freg extends Fragment {
         lv_home_login=(LinearLayout)view.findViewById(R.id.lv_home_login);
         tv_find_store=(TextView)view.findViewById(R.id.tv_find_store);
         tv_home_login=(TextView)view.findViewById(R.id.tv_home_login);
-
-        tv_find_store.setTypeface(Navigation_drawer_activity.roboto_bold);
-        tv_home_login.setTypeface(Navigation_drawer_activity.roboto_bold);
-
 
         String[] countries=getResources().getStringArray(R.array.theme_array);
         ArrayAdapter<String> adapter=new ArrayAdapter<String>(getActivity(),R.layout.spinner_layout,R.id.text, countries);
@@ -117,4 +123,12 @@ public class Home_freg extends Fragment {
         }
     }
 
+    @Override
+    public void onClick(View view) {
+        if(view==lv_home_login)
+        {
+            pushFragment(new Login_freg(),"login");
+
+        }
+    }
 }

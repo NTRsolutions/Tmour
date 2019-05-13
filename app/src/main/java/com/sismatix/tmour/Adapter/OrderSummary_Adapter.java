@@ -14,6 +14,7 @@ import java.util.List;
 import com.sismatix.tmour.Activity.Navigation_drawer_activity;
 import com.sismatix.tmour.Model.Offers_Model;
 import com.sismatix.tmour.Model.OrderSummary_Model;
+import com.sismatix.tmour.Preference.Login_preference;
 import com.sismatix.tmour.R;
 
 public class OrderSummary_Adapter extends RecyclerView.Adapter<OrderSummary_Adapter.MyViewHolder> {
@@ -37,10 +38,19 @@ public class OrderSummary_Adapter extends RecyclerView.Adapter<OrderSummary_Adap
     public void onBindViewHolder(@NonNull OrderSummary_Adapter.MyViewHolder holder, int position) {
         final OrderSummary_Model orderSummary_model = orderSummary_models.get(position);
 
-        holder.text_os_order_qty.setTypeface(Navigation_drawer_activity.roboto_bold);
-        holder.tv_os_order_name.setTypeface(Navigation_drawer_activity.roboto_bold);
-        holder.tv_os_price.setTypeface(Navigation_drawer_activity.roboto_bold);
-        holder.tv_x.setTypeface(Navigation_drawer_activity.roboto_bold);
+        String lang_flag = Login_preference.get_Lang_flag(context);
+
+        if (lang_flag.equals("0")){
+            holder.text_os_order_qty.setTypeface(Navigation_drawer_activity.cairo_bold);
+            holder.tv_os_order_name.setTypeface(Navigation_drawer_activity.cairo_bold);
+            holder.tv_os_price.setTypeface(Navigation_drawer_activity.cairo_bold);
+            holder.tv_x.setTypeface(Navigation_drawer_activity.cairo_bold);
+        }else {
+            holder.text_os_order_qty.setTypeface(Navigation_drawer_activity.roboto_bold);
+            holder.tv_os_order_name.setTypeface(Navigation_drawer_activity.roboto_bold);
+            holder.tv_os_price.setTypeface(Navigation_drawer_activity.roboto_bold);
+            holder.tv_x.setTypeface(Navigation_drawer_activity.roboto_bold);
+        }
 
        /* holder.text_os_order_qty.setText(orderSummary_model.getOrder_qty());
         holder.tv_os_order_name.setText(orderSummary_model.getOrder_title());

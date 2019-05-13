@@ -12,7 +12,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-
         <android.support.design.widget.AppBarLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -23,14 +22,26 @@
                 android:id="@+id/toolbar_search"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                android:background="@color/colorAccent"
+                android:background="@drawable/toolbaar_img"
                 app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
                 app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:layout_gravity="center|start"
+                    android:gravity="center|start"
+                    android:textColor="@color/white"
+                    android:id="@+id/tv_search_to_title"
+                    android:visibility="visible"/>
 
 
             </android.support.v7.widget.Toolbar>
 
         </android.support.design.widget.AppBarLayout>
+
+
     </LinearLayout>
 
     <LinearLayout

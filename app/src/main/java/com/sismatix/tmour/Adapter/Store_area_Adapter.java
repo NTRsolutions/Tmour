@@ -18,6 +18,7 @@ import java.util.List;
 import com.sismatix.tmour.Activity.Navigation_drawer_activity;
 import com.sismatix.tmour.Fregment.OrderDetails;
 import com.sismatix.tmour.Model.Store_area_Model;
+import com.sismatix.tmour.Preference.Login_preference;
 import com.sismatix.tmour.R;
 
 
@@ -47,16 +48,31 @@ public class Store_area_Adapter extends RecyclerView.Adapter<Store_area_Adapter.
 
         final Store_area_Model store_model = model.get(position);
 
-        holder.tv_store_delivery.setTypeface(Navigation_drawer_activity.roboto_bold);
-        holder.tv_store_minimum.setTypeface(Navigation_drawer_activity.roboto_bold);
-        holder.tv_store_avg_min.setTypeface(Navigation_drawer_activity.roboto_bold);
-        holder.tv_store_avg_text.setTypeface(Navigation_drawer_activity.roboto_bold);
-        holder.tv_store_pay_method.setTypeface(Navigation_drawer_activity.roboto_bold);
-        holder.tv_pay_store_text.setTypeface(Navigation_drawer_activity.roboto_bold);
-        holder.tv_rating_count.setTypeface(Navigation_drawer_activity.roboto_bold);
-        holder.tv_store_desc.setTypeface(Navigation_drawer_activity.roboto_bold);
-        holder.tv_store_new.setTypeface(Navigation_drawer_activity.roboto_bold);
-        holder.tv_store_name.setTypeface(Navigation_drawer_activity.roboto_bold);
+        String lang_flag = Login_preference.get_Lang_flag(context);
+
+        if (lang_flag.equals("0")){
+            holder.tv_store_delivery.setTypeface(Navigation_drawer_activity.cairo_bold);
+            holder.tv_store_minimum.setTypeface(Navigation_drawer_activity.cairo_bold);
+            holder.tv_store_avg_min.setTypeface(Navigation_drawer_activity.cairo_bold);
+            holder.tv_store_avg_text.setTypeface(Navigation_drawer_activity.cairo_bold);
+            holder.tv_store_pay_method.setTypeface(Navigation_drawer_activity.cairo_bold);
+            holder.tv_pay_store_text.setTypeface(Navigation_drawer_activity.cairo_bold);
+            holder.tv_rating_count.setTypeface(Navigation_drawer_activity.cairo_bold);
+            holder.tv_store_desc.setTypeface(Navigation_drawer_activity.cairo_bold);
+            holder.tv_store_new.setTypeface(Navigation_drawer_activity.cairo_bold);
+            holder.tv_store_name.setTypeface(Navigation_drawer_activity.cairo_bold);
+        }else {
+            holder.tv_store_delivery.setTypeface(Navigation_drawer_activity.roboto_bold);
+            holder.tv_store_minimum.setTypeface(Navigation_drawer_activity.roboto_bold);
+            holder.tv_store_avg_min.setTypeface(Navigation_drawer_activity.roboto_bold);
+            holder.tv_store_avg_text.setTypeface(Navigation_drawer_activity.roboto_bold);
+            holder.tv_store_pay_method.setTypeface(Navigation_drawer_activity.roboto_bold);
+            holder.tv_pay_store_text.setTypeface(Navigation_drawer_activity.roboto_bold);
+            holder.tv_rating_count.setTypeface(Navigation_drawer_activity.roboto_bold);
+            holder.tv_store_desc.setTypeface(Navigation_drawer_activity.roboto_bold);
+            holder.tv_store_new.setTypeface(Navigation_drawer_activity.roboto_bold);
+            holder.tv_store_name.setTypeface(Navigation_drawer_activity.roboto_bold);
+        }
 
         holder.lv_store_area_click.setOnClickListener(new View.OnClickListener() {
             @Override

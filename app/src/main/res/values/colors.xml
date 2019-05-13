@@ -16,6 +16,7 @@
     <color name="offers_discount">#1f1f1f</color>
     <color name="grey">#616161</color>
     <color name="dark_grey">#dcdcdc</color>
+    <color name="darkkk">#cdcdcd</color>
     <color name="back">#bf9a65</color>
     <color name="light_greyy" tools:ignore="MissingDefaultResource">#a1a1a1</color>
     <color name="red">#f13030</color>

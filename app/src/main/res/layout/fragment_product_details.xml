@@ -12,7 +12,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-
         <android.support.design.widget.AppBarLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -26,10 +25,22 @@
                 android:background="@drawable/toolbaar_img"
                 app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
                 app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:layout_gravity="center|start"
+                    android:gravity="center|start"
+                    android:textColor="@color/white"
+                    android:id="@+id/tv_pro_to_title"
+                    android:visibility="visible"/>
+
 
             </android.support.v7.widget.Toolbar>
 
         </android.support.design.widget.AppBarLayout>
+
     </LinearLayout>
 
     <LinearLayout
@@ -41,7 +52,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="0.3"
+            android:layout_weight="0.4"
             android:orientation="vertical">
 
             <ScrollView
@@ -59,12 +70,14 @@
                         android:layout_height="match_parent"
                         android:gravity="center"
                         android:orientation="vertical"
-                        android:padding="12dp">
+                        android:padding="12dp"
+                        android:layout_marginTop="5dp">
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="150dp"
                             android:gravity="center"
+                            android:padding="5dp"
                             android:orientation="vertical">
 
                             <ImageView
@@ -75,18 +88,25 @@
 
                         </LinearLayout>
                     </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="3dp"
+                        android:background="@color/background"/>
 
                     <LinearLayout
+                        android:layout_marginTop="10dp"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_marginLeft="60dp"
+                        android:layout_marginRight="60dp"
                         android:orientation="horizontal">
 
                         <android.support.v7.widget.RecyclerView
                             android:id="@+id/recyclerview_pro_det_images"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:layout_marginLeft="100dp"
-                            android:layout_marginRight="100dp"
                             android:layoutAnimation="@anim/layout_animation_fall_down"
                             android:scrollbars="none" />
 
@@ -149,7 +169,8 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_margin="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
                         android:background="@drawable/lv_border"
                         android:orientation="vertical">
 
@@ -361,6 +382,15 @@
                             android:textSize="16dp"
                             android:textStyle="bold" />
 
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/dot"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginRight="3dp"
+                                android:textColor="@color/black"
+                                android:textSize="16dp"
+                                android:textStyle="bold" />
 
                         <TextView
                             android:id="@+id/tv_store"
@@ -387,6 +417,15 @@
                                 android:textColor="@color/black"
                                 android:textSize="16dp"
                                 android:textStyle="bold" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/dot"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginRight="3dp"
+                                android:textColor="@color/black"
+                                android:textSize="16dp"
+                                android:textStyle="bold"/>
 
                             <TextView
                                 android:id="@+id/tv_status"
@@ -394,6 +433,7 @@
                                 android:layout_height="wrap_content"
                                 android:gravity="center|start"
                                 android:text="Available"
+
                                 android:layout_marginLeft="10dp"
                                 android:textColor="@color/black"
                                 android:textSize="16dp" />
@@ -401,6 +441,13 @@
                         </LinearLayout>
 
                     </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@color/light_grey"/>
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -455,13 +502,17 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="3.7"
+            android:layout_weight="3.6"
+            android:layout_gravity="bottom"
+            android:gravity="bottom"
             android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:gravity="center"
                 android:weightSum="2">
 
                 <LinearLayout
@@ -471,7 +522,7 @@
                     android:background="@drawable/cursoredd"
                     android:gravity="center"
                     android:orientation="vertical"
-                    android:padding="10dp">
+                    android:padding="8dp">
 
                     <TextView
                         android:id="@+id/tv_add_to_cart"
@@ -492,7 +543,7 @@
                     android:background="@drawable/cursored"
                     android:gravity="center"
                     android:orientation="vertical"
-                    android:padding="10dp">
+                    android:padding="8dp">
 
                     <TextView
                         android:id="@+id/tv_add_to_wishlist"
@@ -501,6 +552,7 @@
                         android:text="@string/addtowish"
                         android:textColor="@color/white"
                         android:textSize="16dp"
+                        android:gravity="center"
                         android:textStyle="bold" />
 
                 </LinearLayout>

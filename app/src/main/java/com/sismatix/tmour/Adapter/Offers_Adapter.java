@@ -16,6 +16,7 @@ import java.util.List;
 
 import com.sismatix.tmour.Activity.Navigation_drawer_activity;
 import com.sismatix.tmour.Model.Offers_Model;
+import com.sismatix.tmour.Preference.Login_preference;
 import com.sismatix.tmour.R;
 
 public class Offers_Adapter extends RecyclerView.Adapter<Offers_Adapter.MyViewHolder> {
@@ -39,10 +40,19 @@ public class Offers_Adapter extends RecyclerView.Adapter<Offers_Adapter.MyViewHo
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         final Offers_Model offers_model = myoffersModels.get(position);
 
-        holder.tv_offers_discount.setTypeface(Navigation_drawer_activity.roboto_bold);
-        holder.tv_offers_description.setTypeface(Navigation_drawer_activity.roboto_bold);
-        holder.tv_offers_price.setTypeface(Navigation_drawer_activity.roboto_bold);
-        holder.tv_orders_fake_price.setTypeface(Navigation_drawer_activity.cairo_bold);
+        String lang_flag = Login_preference.get_Lang_flag(context);
+
+        if (lang_flag.equals("0")){
+            holder.tv_offers_discount.setTypeface(Navigation_drawer_activity.cairo_bold);
+            holder.tv_offers_description.setTypeface(Navigation_drawer_activity.cairo_bold);
+            holder.tv_offers_price.setTypeface(Navigation_drawer_activity.cairo_bold);
+            holder.tv_orders_fake_price.setTypeface(Navigation_drawer_activity.cairo_bold);
+        }else {
+            holder.tv_offers_discount.setTypeface(Navigation_drawer_activity.roboto_bold);
+            holder.tv_offers_description.setTypeface(Navigation_drawer_activity.roboto_bold);
+            holder.tv_offers_price.setTypeface(Navigation_drawer_activity.roboto_bold);
+            holder.tv_orders_fake_price.setTypeface(Navigation_drawer_activity.cairo_bold);
+        }
 
         holder.tv_orders_fake_price.setPaintFlags(holder.tv_orders_fake_price.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
 

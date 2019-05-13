@@ -10,7 +10,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-
         <android.support.design.widget.AppBarLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -24,10 +23,23 @@
                 android:background="@drawable/toolbaar_img"
                 app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
                 app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:layout_gravity="center|start"
+                    android:gravity="center|start"
+                    android:textColor="@color/white"
+                    android:id="@+id/tv_sinfo_to_title"
+                    android:visibility="visible"/>
+
 
             </android.support.v7.widget.Toolbar>
 
         </android.support.design.widget.AppBarLayout>
+
+
     </LinearLayout>
 
     <ScrollView
@@ -80,37 +92,41 @@
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="3dp"
-                android:background="@color/light_grey" />
+                android:layout_height="5dp"
+                android:background="@color/dark_grey" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:padding="10dp"
+                android:layout_gravity="center"
+                android:gravity="center"
                 android:weightSum="2">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1.7"
                     android:gravity="center|top"
                     android:paddingLeft="5dp"
                     android:paddingRight="5dp">
 
                     <ImageView
-                        android:layout_width="45dp"
-                        android:layout_height="45dp"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
                         android:padding="3dp"
                         android:src="@drawable/deliverytime" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="55dp"
+                    android:layout_height="match_parent"
                     android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
                     android:layout_weight="0.3"
-                    android:gravity="center"
+                    android:gravity="center|top"
+                    android:layout_marginTop="4dp"
                     android:orientation="vertical">
 
                     <TextView
@@ -119,53 +135,59 @@
                         android:layout_height="wrap_content"
                         android:text="@string/deliverytime"
                         android:textColor="@color/grey"
-                        android:textSize="18dp"
+                        android:textSize="15dp"
                         android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/tv_del_time"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
+                        android:layout_marginTop="5dp"
                         android:text="40 min"
-                        android:textColor="@color/light_grey"
-                        android:textSize="16dp"
-                        android:textStyle="bold" />
+                        android:gravity="start|center"
+                        android:textColor="@color/light_greyy"
+                        android:textSize="14dp"
+                         />
                 </LinearLayout>
             </LinearLayout>
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="@color/light_grey" />
+                android:background="@color/darkkk" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:padding="10dp"
+                android:layout_gravity="center"
+                android:gravity="center"
                 android:weightSum="2">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1.7"
                     android:gravity="center|top"
                     android:paddingLeft="5dp"
+                    android:layout_gravity="center|top"
                     android:paddingRight="5dp">
 
                     <ImageView
-                        android:layout_width="45dp"
-                        android:layout_height="45dp"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
                         android:padding="3dp"
                         android:src="@drawable/minimumorder" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="55dp"
+                    android:layout_height="match_parent"
                     android:layout_weight="0.3"
-                    android:gravity="center"
+                    android:gravity="center|top"
+                    android:layout_marginTop="4dp"
+                    android:layout_gravity="center|top"
                     android:layout_marginLeft="10dp"
                     android:orientation="vertical">
 
@@ -175,53 +197,58 @@
                         android:layout_height="wrap_content"
                         android:text="@string/minimumorder"
                         android:textColor="@color/grey"
-                        android:textSize="18dp"
+                        android:textSize="15dp"
                         android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/tv_min_order"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
+                        android:layout_marginTop="5dp"
                         android:text="KWD 45.00"
-                        android:textColor="@color/light_grey"
-                        android:textSize="16dp"
-                        android:textStyle="bold" />
+                        android:textColor="@color/light_greyy"
+                        android:textSize="14sp"
+                        android:gravity="start|center"
+                         />
                 </LinearLayout>
             </LinearLayout>
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="@color/light_grey" />
+                android:background="@color/darkkk" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:padding="10dp"
+                android:layout_gravity="center"
+                android:gravity="center"
                 android:weightSum="2">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1.7"
                     android:gravity="center|top"
+                    android:layout_gravity="center|top"
                     android:paddingLeft="5dp"
                     android:paddingRight="5dp">
                     <ImageView
-                        android:layout_width="45dp"
-                        android:layout_height="45dp"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
                         android:padding="3dp"
                         android:src="@drawable/servicecharge" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="55dp"
+                    android:layout_height="match_parent"
                     android:layout_weight="0.3"
                     android:layout_marginLeft="10dp"
-                    android:gravity="center"
+                    android:gravity="center|top"
+                    android:layout_gravity="top|center"
                     android:orientation="vertical">
 
                     <TextView
@@ -230,54 +257,63 @@
                         android:layout_height="wrap_content"
                         android:text="@string/servicecharge"
                         android:textColor="@color/grey"
-                        android:textSize="18dp"
+                        android:textSize="15dp"
+                        android:layout_marginTop="4dp"
+                        android:gravity="center|top|start"
                         android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/tv_service_ch"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
+                        android:layout_marginTop="5dp"
                         android:text="KWD 0.00"
-                        android:textColor="@color/light_grey"
-                        android:textSize="16dp"
-                        android:textStyle="bold" />
+                        android:gravity="start|center"
+                        android:textColor="@color/light_greyy"
+                        android:textSize="14dp"
+                        />
                 </LinearLayout>
             </LinearLayout>
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="@color/light_grey" />
+                android:background="@color/darkkk" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:padding="10dp"
+                android:layout_gravity="center"
+                android:gravity="center"
                 android:weightSum="2">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1.7"
+                    android:layout_gravity="center|top"
                     android:gravity="center|top"
                     android:paddingLeft="5dp"
+                    android:layout_marginTop="4dp"
                     android:paddingRight="5dp">
 
                     <ImageView
-                        android:layout_width="45dp"
-                        android:layout_height="45dp"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
                         android:padding="3dp"
                         android:src="@drawable/preorder" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="55dp"
+                    android:layout_height="match_parent"
                     android:layout_weight="0.3"
-                    android:gravity="center"
+                    android:gravity="center|top"
+                    android:layout_gravity="top|center"
                     android:layout_marginLeft="10dp"
+                    android:layout_marginTop="4dp"
                     android:orientation="vertical">
 
                     <TextView
@@ -286,25 +322,26 @@
                         android:layout_height="wrap_content"
                         android:text="@string/preorder"
                         android:textColor="@color/grey"
-                        android:textSize="18dp"
+                        android:textSize="15dp"
                         android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/tv_preorder"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center|start|top"
                         android:text="NO"
-                        android:textColor="@color/light_grey"
-                        android:textSize="16dp"
-                        android:textStyle="bold" />
+                        android:textColor="@color/light_greyy"
+                        android:textSize="14dp"
+                        />
                 </LinearLayout>
             </LinearLayout>
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="@color/light_grey" />
+                android:background="@color/darkkk" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -323,37 +360,42 @@
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="3dp"
-                android:background="@color/light_grey" />
+                android:layout_height="5dp"
+                android:background="@color/darkkk" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:padding="10dp"
+                android:layout_gravity="center|top"
+                android:gravity="top|center"
                 android:weightSum="2">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1.7"
                     android:gravity="center|top"
+                    android:layout_gravity="center|top"
                     android:paddingLeft="5dp"
                     android:paddingRight="5dp">
 
                     <ImageView
-                        android:layout_width="45dp"
-                        android:layout_height="45dp"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
                         android:padding="3dp"
                         android:src="@drawable/storearea" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="55dp"
+                    android:layout_height="match_parent"
                     android:layout_weight="0.3"
                     android:layout_marginLeft="10dp"
-                    android:gravity="center"
+                    android:gravity="center|top"
+                    android:layout_marginTop="4dp"
+                    android:layout_gravity="top|center"
                     android:orientation="vertical">
 
                     <TextView
@@ -362,17 +404,17 @@
                         android:layout_height="wrap_content"
                         android:text="@string/storearea"
                         android:textColor="@color/grey"
-                        android:textSize="18dp"
+                        android:textSize="15dp"
                         android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/tv_store_area"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
+                        android:layout_marginTop="5dp"
                         android:text="area name"
-                        android:textColor="@color/light_grey"
-                        android:textSize="16dp"
+                        android:textColor="@color/light_greyy"
+                        android:textSize="14dp"
                         android:textStyle="bold" />
                 </LinearLayout>
             </LinearLayout>
@@ -380,36 +422,41 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="@color/light_grey" />
+                android:background="@color/darkkk" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:padding="10dp"
+                android:layout_gravity="center|top"
+                android:gravity="center|top"
                 android:weightSum="2">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1.7"
                     android:gravity="center|top"
+                    android:layout_gravity="center|top"
                     android:paddingLeft="5dp"
                     android:paddingRight="5dp">
 
                     <ImageView
-                        android:layout_width="45dp"
-                        android:layout_height="45dp"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
                         android:padding="3dp"
                         android:src="@drawable/openinghours" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="55dp"
+                    android:layout_height="match_parent"
                     android:layout_weight="0.3"
                     android:layout_marginLeft="10dp"
-                    android:gravity="center"
+                    android:gravity="center|top"
+                    android:layout_marginTop="4dp"
+                    android:layout_gravity="center|top"
                     android:orientation="vertical">
 
                     <TextView
@@ -418,17 +465,17 @@
                         android:layout_height="wrap_content"
                         android:text="@string/openinghours"
                         android:textColor="@color/grey"
-                        android:textSize="18dp"
+                        android:textSize="15dp"
                         android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/tv_opening_hour"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
+                        android:layout_marginTop="5dp"
                         android:text="12:00PM - 3:00AM"
-                        android:textColor="@color/light_grey"
-                        android:textSize="16dp"
+                        android:textColor="@color/light_greyy"
+                        android:textSize="14dp"
                         android:textStyle="bold" />
                 </LinearLayout>
             </LinearLayout>
@@ -436,7 +483,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="@color/light_grey" />
+                android:background="@color/darkkk" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -486,7 +533,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="@color/light_grey" />
+                android:background="@color/darkkk" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

@@ -16,6 +16,7 @@ import java.util.List;
 
 import com.sismatix.tmour.Activity.Navigation_drawer_activity;
 import com.sismatix.tmour.Model.Payment_Method_Model;
+import com.sismatix.tmour.Preference.Login_preference;
 import com.sismatix.tmour.R;
 
 public class Payment_Method_Adapter extends RecyclerView.Adapter<Payment_Method_Adapter.MyViewHolder> {
@@ -39,7 +40,13 @@ public class Payment_Method_Adapter extends RecyclerView.Adapter<Payment_Method_
     public void onBindViewHolder(final Payment_Method_Adapter.MyViewHolder holder, final int position) {
         final Payment_Method_Model payment_model = model.get(position);
 
-        holder.rad_payment.setTypeface(Navigation_drawer_activity.roboto_bold);
+        String lang_flag = Login_preference.get_Lang_flag(context);
+
+        if (lang_flag.equals("0")){
+            holder.rad_payment.setTypeface(Navigation_drawer_activity.cairo_bold);
+        }else {
+            holder.rad_payment.setTypeface(Navigation_drawer_activity.roboto_bold);
+        }
 
         //holder.rad_payment.setText(payment_model.getLabel());
 

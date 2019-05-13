@@ -19,6 +19,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -27,6 +28,7 @@ import com.sismatix.tmour.Activity.Navigation_drawer_activity;
 import com.sismatix.tmour.Adapter.TAb_PAGER_Adapter;
 import com.sismatix.tmour.CheckNetwork;
 import com.sismatix.tmour.Model.Librarytablist_model;
+import com.sismatix.tmour.Preference.Login_preference;
 import com.sismatix.tmour.R;
 
 /**
@@ -42,11 +44,12 @@ public class Product_freg extends Fragment implements ViewPager.OnPageChangeList
     View view;
     TabLayout tabs;
     ViewPager pager;
+    TextView tv_fmin,tv_seecart,tv_totaltitle,tv_cart_main_total,tv_cart_item;
     private ArrayList<Librarytablist_model> category_list;
     //MainPagerAdapter adapter;
     //CharSequence Titles[] = {"TAB 1", "TAB 2"};
     private int noOfTabs = 10;
-
+    String lang_flag;
     public Product_freg() {
         // Required empty public constructor
     }
@@ -56,8 +59,10 @@ public class Product_freg extends Fragment implements ViewPager.OnPageChangeList
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_product_freg, container, false);
+        lang_flag=Login_preference.get_Lang_flag(getActivity());
 
         Allocate_Memory(view);
+        setTypeface();
         ((AppCompatActivity) getActivity()).setSupportActionBar(toolbar_product);
 
         setHasOptionsMenu(true);
@@ -66,8 +71,6 @@ public class Product_freg extends Fragment implements ViewPager.OnPageChangeList
                 .setDisplayHomeAsUpEnabled(true);
 
         collapsing_toolbar.setTitle(getResources().getString(R.string.datesstreet));
-        collapsing_toolbar.setCollapsedTitleTypeface(Navigation_drawer_activity.roboto_bold);
-        collapsing_toolbar.setExpandedTitleTypeface(Navigation_drawer_activity.roboto_regular);
         category_list = new ArrayList<>();
 
         if (CheckNetwork.isNetworkAvailable(getActivity())) {
@@ -80,6 +83,26 @@ public class Product_freg extends Fragment implements ViewPager.OnPageChangeList
         tabs.addOnTabSelectedListener(this);
 
         return view;
+    }
+
+    private void setTypeface() {
+        if (lang_flag.equals("0")){
+            collapsing_toolbar.setCollapsedTitleTypeface(Navigation_drawer_activity.cairo_bold);
+            collapsing_toolbar.setExpandedTitleTypeface(Navigation_drawer_activity.cairo_regular);
+            tv_fmin.setTypeface(Navigation_drawer_activity.cairo_bold);
+            tv_seecart.setTypeface(Navigation_drawer_activity.cairo_bold);
+            tv_totaltitle.setTypeface(Navigation_drawer_activity.cairo_bold);
+            tv_cart_main_total.setTypeface(Navigation_drawer_activity.cairo_bold);
+            tv_cart_item.setTypeface(Navigation_drawer_activity.cairo_bold);
+        }else {
+            collapsing_toolbar.setCollapsedTitleTypeface(Navigation_drawer_activity.roboto_bold);
+            collapsing_toolbar.setExpandedTitleTypeface(Navigation_drawer_activity.roboto_regular);
+            tv_fmin.setTypeface(Navigation_drawer_activity.roboto_regular);
+            tv_seecart.setTypeface(Navigation_drawer_activity.roboto_bold);
+            tv_totaltitle.setTypeface(Navigation_drawer_activity.roboto_bold);
+            tv_cart_main_total.setTypeface(Navigation_drawer_activity.roboto_bold);
+            tv_cart_item.setTypeface(Navigation_drawer_activity.roboto_bold);
+        }
     }
 
     private void CALL_CATEGORYLIST_API() {
@@ -169,6 +192,11 @@ public class Product_freg extends Fragment implements ViewPager.OnPageChangeList
         iv_product_header = (ImageView) view.findViewById(R.id.iv_product_header);
         toolbar_product = (Toolbar) view.findViewById(R.id.toolbar_product);
         tabs = (TabLayout) view.findViewById(R.id.tabs);
+        tv_fmin = (TextView) view.findViewById(R.id.tv_fmin);
+        tv_seecart = (TextView) view.findViewById(R.id.tv_seecart);
+        tv_totaltitle = (TextView) view.findViewById(R.id.tv_totaltitle);
+        tv_cart_main_total = (TextView) view.findViewById(R.id.tv_cart_main_total);
+        tv_cart_item = (TextView) view.findViewById(R.id.tv_cart_item);
     }
 
     private void setUpViewPager() {

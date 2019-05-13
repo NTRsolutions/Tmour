@@ -88,6 +88,7 @@
             </LinearLayout>
 
             <TextView
+                android:id="@+id/tv_fmin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -162,6 +163,7 @@
             app:layout_behavior="@string/appbar_scrolling_view_behavior" />
        </LinearLayout>
     </android.support.v4.widget.NestedScrollView>
+<!--
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -177,102 +179,106 @@
 
         </LinearLayout>
 
+
+    </LinearLayout>
+-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:gravity="center"
+        android:layout_gravity="bottom"
+        android:orientation="vertical">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="3.6"
+            android:background="@color/colorAccent"
             android:gravity="center"
-            android:orientation="vertical">
+            android:orientation="horizontal"
+            android:weightSum="4">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="3.5"
-                android:background="@color/colorAccent"
-                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="2.5"
+                android:gravity="center|start"
                 android:orientation="horizontal"
-                android:weightSum="4">
+                android:padding="8dp">
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="5dp"
-                    android:layout_weight="2"
-                    android:gravity="center|start"
-                    android:orientation="horizontal"
-                    android:padding="10dp">
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginBottom="5dp"
-                        android:background="@drawable/cart_border"
-                        android:gravity="start|center"
-                        android:paddingLeft="10dp"
-                        android:paddingTop="3dp"
-                        android:paddingRight="10dp"
-                        android:paddingBottom="3dp">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:text="@string/five"
-                            android:textColor="@color/white"
-                            android:textSize="18sp"
-                            android:textStyle="bold" />
-                    </LinearLayout>
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/cart_border"
+                    android:gravity="center"
+                    >
 
                     <TextView
+                        android:id="@+id/tv_cart_item"
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:padding="10dp"
-                        android:text="@string/see_cart"
+                        android:text="@string/five"
+                        android:layout_gravity="center"
                         android:textColor="@color/white"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
-
-                </LinearLayout>
-
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="2"
-                    android:orientation="horizontal"
-                    android:padding="10dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:padding="10dp"
-                        android:text="@string/total_cart"
-                        android:textColor="@color/white"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:padding="10dp"
-                        android:text="@string/price_cart"
-                        android:textColor="@color/white"
-                        android:textSize="14sp"
+                        android:textSize="18sp"
                         android:textStyle="bold" />
                 </LinearLayout>
 
+                <TextView
+                    android:id="@+id/tv_seecart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="@string/see_cart"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
 
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.5"
+                android:layout_gravity="end|center"
+                android:gravity="end|center"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="@string/total_cart"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:id="@+id/tv_totaltitle"/>
+
+                <TextView
+                    android:id="@+id/tv_cart_main_total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="@string/price_cart"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
             </LinearLayout>
 
 
         </LinearLayout>
 
-    </LinearLayout>
 
+    </LinearLayout>
 
 </android.support.design.widget.CoordinatorLayout>

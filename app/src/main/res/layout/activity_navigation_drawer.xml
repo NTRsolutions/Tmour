@@ -32,7 +32,9 @@
             app:itemTextColor="@color/white"
             app:itemIconTint="@color/white"
             app:labelVisibilityMode="labeled"
-            app:menu="@menu/bottom_navigation" />
+            app:menu="@menu/bottom_navigation"
+            android:theme="@style/Widget.BottomNavigationView"
+            />
 
     </RelativeLayout>
 

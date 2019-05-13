@@ -19,6 +19,7 @@ import com.sismatix.tmour.Activity.Navigation_drawer_activity;
 import com.sismatix.tmour.Fregment.OrderDetails;
 import com.sismatix.tmour.Model.MyOrder_Model;
 import com.sismatix.tmour.Model.Offers_Model;
+import com.sismatix.tmour.Preference.Login_preference;
 import com.sismatix.tmour.R;
 
 public class MyOrders_Adapter extends RecyclerView.Adapter<MyOrders_Adapter.MyViewHolder> {
@@ -42,12 +43,32 @@ public class MyOrders_Adapter extends RecyclerView.Adapter<MyOrders_Adapter.MyVi
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         final MyOrder_Model myOrder_model = myOrderModels.get(position);
 
-        holder.tv_customer_name.setTypeface(Navigation_drawer_activity.roboto_bold);
-        holder.tv_order_date.setTypeface(Navigation_drawer_activity.roboto_bold);
-        holder.tv_order_time.setTypeface(Navigation_drawer_activity.roboto_bold);
-        holder.tv_order_id.setTypeface(Navigation_drawer_activity.roboto_medium);
-        holder.text_order_id.setTypeface(Navigation_drawer_activity.roboto_medium);
-        holder.tv_order_status.setTypeface(Navigation_drawer_activity.roboto_bold);
+        String lang_flag = Login_preference.get_Lang_flag(context);
+
+        if (lang_flag.equals("0")) {
+            holder.tv_customer_name.setTypeface(Navigation_drawer_activity.cairo_bold);
+            holder.tv_order_date.setTypeface(Navigation_drawer_activity.cairo_bold);
+            holder.tv_order_time.setTypeface(Navigation_drawer_activity.cairo_bold);
+            holder.tv_order_id.setTypeface(Navigation_drawer_activity.cairo_bold);
+            holder.text_order_id.setTypeface(Navigation_drawer_activity.cairo_bold);
+            holder.tv_order_status.setTypeface(Navigation_drawer_activity.cairo_bold);
+            holder.tv_reorder.setTypeface(Navigation_drawer_activity.cairo_bold);
+            holder.iv_arrow.setImageResource(R.drawable.ic_keyboard_arrow_left_black_24dp);
+
+        } else {
+            holder.tv_customer_name.setTypeface(Navigation_drawer_activity.roboto_bold);
+            holder.tv_order_date.setTypeface(Navigation_drawer_activity.roboto_bold);
+            holder.tv_order_time.setTypeface(Navigation_drawer_activity.roboto_bold);
+            holder.tv_order_id.setTypeface(Navigation_drawer_activity.roboto_medium);
+            holder.text_order_id.setTypeface(Navigation_drawer_activity.roboto_medium);
+            holder.tv_order_status.setTypeface(Navigation_drawer_activity.roboto_bold);
+            holder.tv_reorder.setTypeface(Navigation_drawer_activity.roboto_bold);
+            holder.iv_arrow.setImageResource(R.drawable.ic_keyboard_arrow_right_black_24dp);
+
+        }
+
+
+
 
         holder.lv_orders.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -75,15 +96,18 @@ public class MyOrders_Adapter extends RecyclerView.Adapter<MyOrders_Adapter.MyVi
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
 
-        ImageView iv_order;
-        TextView tv_customer_name, tv_order_date, tv_order_time, tv_order_id,tv_order_status,text_order_id;
+        ImageView iv_order,iv_arrow;
+        TextView tv_customer_name, tv_reorder,tv_order_date, tv_order_time, tv_order_id,tv_order_status,text_order_id;
         LinearLayout lv_orders;
+
 
         public MyViewHolder(@NonNull View view) {
             super(view);
 
             iv_order = (ImageView)view.findViewById(R.id.iv_order);
+            iv_arrow = (ImageView)view.findViewById(R.id.iv_arrow);
 
+            tv_reorder = (TextView)view.findViewById(R.id.tv_reorder);
             tv_customer_name = (TextView)view.findViewById(R.id.tv_customer_name);
             tv_order_date = (TextView)view.findViewById(R.id.tv_order_date);
             tv_order_time = (TextView)view.findViewById(R.id.tv_order_time);

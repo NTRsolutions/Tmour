@@ -101,7 +101,7 @@
     <string name="itemprice">سعر المنتج:</string>
     <string name="itemkd">  10.00د.ك</string>
     <string name="total">الإجمالي:</string>
-    <string name="tota">Total</string>
+    <string name="tota">الإجمالي</string>
     <string name="Quantity">الكمية</string>
     <string name="additem">أضف منتج</string>
     <string name="checkoutt">إتمام الطلب</string><!--wrong--><!--Complete the application-->
@@ -135,8 +135,8 @@
     <string name="share">مشاركة</string>
     <string name="add_det">تفاصيل إضافية</string>
     <string name="dummydate">وهي من أكثر أنواع التمر المشهورة عالمياً والتي يأتي تصنيفها الأول من حيث الشهرة والانتشار في دول العالم، والتي تتميز بمزيج من الليونة والجفاف كما أنها تتميز بشدة حلاوتها. </string>
-    <string name="txtbullewtstore">\u2022 المتجر:</string>
-    <string name="txtbullewtstatus">\u2022 الحالة:</string>
+    <string name="txtbullewtstore">\u2022 المتجر</string>
+    <string name="txtbullewtstatus">\u2022 الحالة</string>
     <string name="bethe">كن أول من يقيم هذا المنتج</string>
     <string name="writerev">قيم المنتج الآن</string><!--wrong it is write a review and translation is rate now-->
 

@@ -7,6 +7,7 @@ import android.support.design.widget.TextInputEditText;
 import android.support.design.widget.TextInputLayout;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.Toolbar;
+import android.text.util.Linkify;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -24,6 +25,7 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import com.sismatix.tmour.Activity.Navigation_drawer_activity;
+import com.sismatix.tmour.Preference.Login_preference;
 import com.sismatix.tmour.R;
 
 import java.text.SimpleDateFormat;
@@ -39,7 +41,7 @@ public class Register_freg extends Fragment {
     TextInputEditText edt_reg_password,edt_reg_confirm_password;
     LinearLayout lv_datepicker,lv_register;
     ImageView iv_calender;
-    TextView tv_gender,tv_receive_update,tv_subscribe,tv_privacy_policy,tv_register;
+    TextView tv_gender,tv_receive_update,tv_subscribe,tv_privacy_policy,tv_register,tv_register_to_title;
     RadioGroup radioGroup;
     RadioButton radio_male,radio_female;
     CheckBox ck_default;
@@ -47,6 +49,7 @@ public class Register_freg extends Fragment {
     Toolbar toolbar_register;
     int mYear, mMonth, mDay, mHour, mMinute;
     String notime = "", vibrateonoff = "",date_time = "",weekday = "",timeee = "";
+    String lang_flag;
 
     public Register_freg() {
         // Required empty public constructor
@@ -58,13 +61,16 @@ public class Register_freg extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         view= inflater.inflate(R.layout.fragment_register_freg, container, false);
+        lang_flag = Login_preference.get_Lang_flag(getActivity());
+
         Allocate_Memory(view);
         setHasOptionsMenu(true);
 
+
         Navigation_drawer_activity.changeToolbarFont(toolbar_register,getActivity());
-
-        toolbar_register.setTitle(getResources().getString(R.string.createaccount_small));
-
+      //  toolbar_register.setTitle(getResources().getString(R.string.createaccount_small));
+        tv_register_to_title.setText(getResources().getString(R.string.createaccount_small));
+       // Navigation_drawer_activity.tv_nav_title.setText(getResources().getString(R.string.createaccount_small));
         ((Navigation_drawer_activity) getActivity()).setSupportActionBar(toolbar_register);
         ((Navigation_drawer_activity) getActivity()).getSupportActionBar()
                 .setDisplayHomeAsUpEnabled(true);
@@ -82,6 +88,47 @@ public class Register_freg extends Fragment {
         String n = " and ";
         String last = "<font color='#004ca0'>Privacy policy</font>";
 */
+        if (lang_flag.equals("0")){
+            layout_email_reg.setTypeface(Navigation_drawer_activity.cairo_bold);
+            layout_reg_password.setTypeface(Navigation_drawer_activity.cairo_bold);
+            layout_reg_confirm_password.setTypeface(Navigation_drawer_activity.cairo_bold);
+            layout_firstname_reg.setTypeface(Navigation_drawer_activity.cairo_bold);
+            layout_lastname_reg.setTypeface(Navigation_drawer_activity.cairo_bold);
+            layout_date_reg.setTypeface(Navigation_drawer_activity.cairo_bold);
+            edt_reg_password.setTypeface(Navigation_drawer_activity.cairo_bold);
+            edt_reg_confirm_password.setTypeface(Navigation_drawer_activity.cairo_bold);
+            edt_reg_firstname.setTypeface(Navigation_drawer_activity.cairo_bold);
+            edt_reg_date.setTypeface(Navigation_drawer_activity.cairo_bold);
+            tv_gender.setTypeface(Navigation_drawer_activity.cairo_bold);
+            tv_subscribe.setTypeface(Navigation_drawer_activity.cairo_bold);
+            tv_receive_update.setTypeface(Navigation_drawer_activity.cairo_bold);
+            tv_privacy_policy.setTypeface(Navigation_drawer_activity.cairo_bold);
+            tv_register_to_title.setTypeface(Navigation_drawer_activity.cairo_bold);
+            tv_register.setTypeface(Navigation_drawer_activity.cairo_bold);
+            radio_male.setTypeface(Navigation_drawer_activity.cairo_bold);
+
+            Navigation_drawer_activity.tv_nav_title.setTypeface(Navigation_drawer_activity.cairo_bold);
+        }else {
+            layout_email_reg.setTypeface(Navigation_drawer_activity.roboto_regular);
+            layout_reg_password.setTypeface(Navigation_drawer_activity.roboto_regular);
+            layout_reg_confirm_password.setTypeface(Navigation_drawer_activity.roboto_regular);
+            layout_firstname_reg.setTypeface(Navigation_drawer_activity.roboto_regular);
+            layout_lastname_reg.setTypeface(Navigation_drawer_activity.roboto_regular);
+            layout_date_reg.setTypeface(Navigation_drawer_activity.roboto_regular);
+            edt_reg_password.setTypeface(Navigation_drawer_activity.roboto_regular);
+            edt_reg_confirm_password.setTypeface(Navigation_drawer_activity.roboto_regular);
+            edt_reg_firstname.setTypeface(Navigation_drawer_activity.roboto_regular);
+            edt_reg_date.setTypeface(Navigation_drawer_activity.roboto_regular);
+            tv_gender.setTypeface(Navigation_drawer_activity.roboto_regular);
+            tv_subscribe.setTypeface(Navigation_drawer_activity.roboto_regular);
+            tv_receive_update.setTypeface(Navigation_drawer_activity.roboto_bold);
+            tv_privacy_policy.setTypeface(Navigation_drawer_activity.roboto_bold);
+            tv_register.setTypeface(Navigation_drawer_activity.roboto_bold);
+            tv_register_to_title.setTypeface(Navigation_drawer_activity.roboto_bold);
+            radio_male.setTypeface(Navigation_drawer_activity.roboto_bold);
+            Navigation_drawer_activity.tv_nav_title.setTypeface(Navigation_drawer_activity.roboto_bold);
+        }
+
         return view;
     }
     private void datePicker() {
@@ -151,6 +198,7 @@ public class Register_freg extends Fragment {
         lv_register=(LinearLayout)view.findViewById(R.id.lv_register);
         iv_calender=(ImageView)view.findViewById(R.id.iv_calender);
 
+        tv_register_to_title=(TextView)view.findViewById(R.id.tv_register_to_title);
         tv_gender=(TextView)view.findViewById(R.id.tv_gender);
         tv_receive_update=(TextView)view.findViewById(R.id.tv_receive_update);
         tv_subscribe=(TextView)view.findViewById(R.id.tv_subscribe);
@@ -160,23 +208,6 @@ public class Register_freg extends Fragment {
         radio_male=(RadioButton)view.findViewById(R.id.radio_male);
         radio_female=(RadioButton)view.findViewById(R.id.radio_female);
         ck_default=(CheckBox)view.findViewById(R.id.ck_default);
-
-        layout_email_reg.setTypeface(Navigation_drawer_activity.roboto_regular);
-        layout_reg_password.setTypeface(Navigation_drawer_activity.roboto_regular);
-        layout_reg_confirm_password.setTypeface(Navigation_drawer_activity.roboto_regular);
-        layout_firstname_reg.setTypeface(Navigation_drawer_activity.roboto_regular);
-        layout_lastname_reg.setTypeface(Navigation_drawer_activity.roboto_regular);
-        layout_date_reg.setTypeface(Navigation_drawer_activity.roboto_regular);
-        edt_reg_password.setTypeface(Navigation_drawer_activity.roboto_regular);
-        edt_reg_confirm_password.setTypeface(Navigation_drawer_activity.roboto_regular);
-        edt_reg_firstname.setTypeface(Navigation_drawer_activity.roboto_regular);
-        edt_reg_date.setTypeface(Navigation_drawer_activity.roboto_regular);
-        tv_gender.setTypeface(Navigation_drawer_activity.roboto_regular);
-        tv_subscribe.setTypeface(Navigation_drawer_activity.roboto_regular);
-        tv_receive_update.setTypeface(Navigation_drawer_activity.roboto_bold);
-        tv_privacy_policy.setTypeface(Navigation_drawer_activity.roboto_bold);
-        tv_register.setTypeface(Navigation_drawer_activity.roboto_bold);
-
 
 
     }

@@ -16,6 +16,7 @@ import java.util.List;
 import com.sismatix.tmour.Activity.Navigation_drawer_activity;
 import com.sismatix.tmour.Model.Cart_Model;
 import com.sismatix.tmour.Model.MyOrder_Model;
+import com.sismatix.tmour.Preference.Login_preference;
 import com.sismatix.tmour.R;
 
 public class Cart_Adapter extends RecyclerView.Adapter<Cart_Adapter.MyViewHolder> {
@@ -39,13 +40,25 @@ public class Cart_Adapter extends RecyclerView.Adapter<Cart_Adapter.MyViewHolder
     public void onBindViewHolder(@NonNull final MyViewHolder holder, int position) {
         final Cart_Model cart_model = cartModels.get(position);
 
-        holder.tv_customer_name.setTypeface(Navigation_drawer_activity.roboto_bold);
-        holder.tv_cart_qty.setTypeface(Navigation_drawer_activity.roboto_bold);
-        holder.tv_cart_quantity_total.setTypeface(Navigation_drawer_activity.cairo_bold);
-        holder.tv_item_price.setTypeface(Navigation_drawer_activity.roboto_medium);
-        holder.tv_cart_price.setTypeface(Navigation_drawer_activity.roboto_medium);
-        holder.tv_tot.setTypeface(Navigation_drawer_activity.roboto_medium);
-        holder.tv_total.setTypeface(Navigation_drawer_activity.roboto_medium);
+        String lang_flag = Login_preference.get_Lang_flag(context);
+
+        if (lang_flag.equals("0")){
+            holder.tv_customer_name.setTypeface(Navigation_drawer_activity.cairo_bold);
+            holder.tv_cart_qty.setTypeface(Navigation_drawer_activity.cairo_bold);
+            holder.tv_cart_quantity_total.setTypeface(Navigation_drawer_activity.cairo_bold);
+            holder.tv_item_price.setTypeface(Navigation_drawer_activity.cairo_bold);
+            holder.tv_cart_price.setTypeface(Navigation_drawer_activity.cairo_bold);
+            holder.tv_tot.setTypeface(Navigation_drawer_activity.cairo_bold);
+            holder.tv_total.setTypeface(Navigation_drawer_activity.cairo_bold);
+        }else {
+            holder.tv_customer_name.setTypeface(Navigation_drawer_activity.roboto_bold);
+            holder.tv_cart_qty.setTypeface(Navigation_drawer_activity.roboto_bold);
+            holder.tv_cart_quantity_total.setTypeface(Navigation_drawer_activity.cairo_bold);
+            holder.tv_item_price.setTypeface(Navigation_drawer_activity.roboto_medium);
+            holder.tv_cart_price.setTypeface(Navigation_drawer_activity.roboto_medium);
+            holder.tv_tot.setTypeface(Navigation_drawer_activity.roboto_medium);
+            holder.tv_total.setTypeface(Navigation_drawer_activity.roboto_medium);
+        }
 
        /* holder.tv_customer_name.setText(cart_model.getCart_title());
         holder.tv_item_price.setText(cart_model.getCart_item_price());

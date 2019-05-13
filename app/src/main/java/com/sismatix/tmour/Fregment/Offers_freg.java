@@ -10,13 +10,16 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import com.sismatix.tmour.Activity.Navigation_drawer_activity;
 import com.sismatix.tmour.Adapter.Offers_Adapter;
+import com.sismatix.tmour.CheckNetwork;
 import com.sismatix.tmour.Model.Offers_Model;
+import com.sismatix.tmour.Preference.Login_preference;
 import com.sismatix.tmour.R;
 
 /**
@@ -27,6 +30,7 @@ public class Offers_freg extends Fragment {
     RecyclerView recycler_offers;
     private static List<Offers_Model> my_offers = new ArrayList<Offers_Model>();
     private static Offers_Adapter offers_adapter;
+    String lang_flag;
 
     public Offers_freg() {
         // Required empty public constructor
@@ -37,11 +41,25 @@ public class Offers_freg extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v =  inflater.inflate(R.layout.fragment_offers_freg, container, false);
-        setHasOptionsMenu(false);
-
-        Navigation_drawer_activity.toolbar.setTitle(getResources().getString(R.string.offers));
+        setHasOptionsMenu(true);
         AllocateMemory(v);
+        setTypface();
+        // Navigation_drawer_activity.toolbar.setTitle(getResources().getString(R.string.offers));
 
+
+
+        if (CheckNetwork.isNetworkAvailable(getActivity())) {
+            CALL_Offer_API();
+        } else {
+            Toast.makeText(getActivity(), "Please Check your Internet Connection", Toast.LENGTH_SHORT).show();
+        }
+
+
+
+        return v;
+    }
+
+    private void CALL_Offer_API() {
         for (int i = 0; i < 5; i++) {
             my_offers.add(new Offers_Model("", "",
                     "", "", ""));
@@ -49,13 +67,26 @@ public class Offers_freg extends Fragment {
 
         offers_adapter.notifyDataSetChanged();
 
-        return v;
     }
-    public void onCreateOptionsMenu(Menu menu){
+
+    private void setTypface() {
+        lang_flag = Login_preference.get_Lang_flag(getContext());
+        Navigation_drawer_activity.tv_nav_title.setVisibility(View.VISIBLE);
+
+        Navigation_drawer_activity.tv_nav_title.setText(getResources().getString(R.string.offers));
+        if (lang_flag.equals("0")) {
+            Navigation_drawer_activity.tv_nav_title.setTypeface(Navigation_drawer_activity.cairo_bold);
+
+        } else {
+            Navigation_drawer_activity.tv_nav_title.setTypeface(Navigation_drawer_activity.roboto_bold);
+        }
+    }
+
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater){
         menu.clear();
-        MenuInflater inflater = getActivity().getMenuInflater();
-        inflater.inflate(R.menu.menu_search, menu);
-        menu.findItem(R.id.search).setEnabled(false);
+       // MenuInflater inflater = getActivity().getMenuInflater();
+       // inflater.inflate(R.menu.menu_search, menu);
+      //  menu.findItem(R.id.search).setEnabled(false);
         super.onCreateOptionsMenu(menu,inflater);
     }
 
