@@ -3,9 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginBottom="?attr/actionBarSize"
     android:orientation="vertical"
     android:background="@color/white"
+    android:layout_marginBottom="?attr/actionBarSize"
     tools:context=".Fregment.Cart_freg">
 
     <LinearLayout
@@ -31,7 +31,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
-                    android:textSize="16sp"
+                    android:textSize="18sp"
                     android:layout_gravity="center|start"
                     android:gravity="center|start"
                     android:textColor="@color/white"
@@ -203,7 +203,6 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginRight="20dp"
-                    android:layout_marginBottom="10dp"
                     android:orientation="vertical">
 
                     <LinearLayout
@@ -269,11 +268,13 @@
 
 
             </LinearLayout>
+<!--
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="0.5dp"
                 android:background="#c2c2c2" />
+-->
 
         </LinearLayout>
 

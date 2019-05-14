@@ -164,7 +164,7 @@ public class Cart_freg extends Fragment implements View.OnClickListener {
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
         menu.clear();
-        inflater.inflate(R.menu.menu_edit, menu);
+       ///inflater.inflate(R.menu.menu_edit, menu);
         super.onCreateOptionsMenu(menu, inflater);
     }
 

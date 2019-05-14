@@ -165,7 +165,7 @@
                             android:gravity="end"
                             android:layout_marginRight="20dp"
                             android:layout_marginLeft="20dp"
-                            android:textColor="@color/black"
+                            android:textColor="@color/green"
                             android:textSize="12dp"
                             android:textStyle="bold" />
 
@@ -173,7 +173,7 @@
                             android:id="@+id/tv_order_sucess"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:text="@string/successful"
+                            android:text="@string/Cancelled"
                             android:gravity="end"
                             android:visibility="gone"
                             android:layout_marginRight="20dp"

@@ -3,13 +3,17 @@ package com.sismatix.tmour.Fregment;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.view.GravityCompat;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -31,6 +35,8 @@ public class Offers_freg extends Fragment {
     private static List<Offers_Model> my_offers = new ArrayList<Offers_Model>();
     private static Offers_Adapter offers_adapter;
     String lang_flag;
+    Toolbar toolbar_offer;
+    TextView tv_offer_title;
 
     public Offers_freg() {
         // Required empty public constructor
@@ -71,16 +77,37 @@ public class Offers_freg extends Fragment {
 
     private void setTypface() {
         lang_flag = Login_preference.get_Lang_flag(getContext());
-        Navigation_drawer_activity.tv_nav_title.setVisibility(View.VISIBLE);
 
-        Navigation_drawer_activity.tv_nav_title.setText(getResources().getString(R.string.offers));
+        tv_offer_title.setText(getResources().getString(R.string.offers));
         if (lang_flag.equals("0")) {
-            Navigation_drawer_activity.tv_nav_title.setTypeface(Navigation_drawer_activity.cairo_bold);
+            tv_offer_title.setTypeface(Navigation_drawer_activity.cairo_bold);
 
         } else {
-            Navigation_drawer_activity.tv_nav_title.setTypeface(Navigation_drawer_activity.roboto_bold);
+            tv_offer_title.setTypeface(Navigation_drawer_activity.roboto_bold);
         }
+
+        ((Navigation_drawer_activity) getActivity()).setSupportActionBar(toolbar_offer);
+        if (toolbar_offer != null) {
+            ((Navigation_drawer_activity) getActivity()).getSupportActionBar()
+                    .setDisplayHomeAsUpEnabled(true);
+
+            toolbar_offer.setNavigationIcon(R.drawable.ic_menu_white_36dp);
+        }
+        toolbar_offer.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ((Navigation_drawer_activity) getActivity()).getmDrawerLayout()
+                        .openDrawer(GravityCompat.START);
+            }
+        });
     }
+/*
+    @Override
+    public void onPrepareOptionsMenu(Menu menu) {
+        MenuItem item=menu.findItem(R.id.search);
+        if(item!=null)
+            item.setVisible(false);
+    }*/
 
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater){
         menu.clear();
@@ -90,9 +117,10 @@ public class Offers_freg extends Fragment {
         super.onCreateOptionsMenu(menu,inflater);
     }
 
-
     private void AllocateMemory(View v) {
         recycler_offers=(RecyclerView)v.findViewById(R.id.recycler_offers);
+        toolbar_offer=(Toolbar) v.findViewById(R.id.toolbar_offer);
+        tv_offer_title=(TextView) v.findViewById(R.id.tv_offer_title);
 
         offers_adapter = new Offers_Adapter(getActivity(), my_offers);
         recycler_offers.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false));

@@ -149,6 +149,8 @@ public class Checkout extends Fragment {
             tv_checkout_to_title.setTypeface(Navigation_drawer_activity.cairo_bold);
 
             confirm_add.setGravity(Gravity.RIGHT|Gravity.CENTER);
+            tv_subtotall.setGravity(Gravity.START|Gravity.CENTER);
+            tv_delfree.setGravity(Gravity.START|Gravity.CENTER);
 
         }else {
             et_voucher.setTypeface(Navigation_drawer_activity.roboto_bold);
@@ -172,6 +174,8 @@ public class Checkout extends Fragment {
             tv_checkout_to_title.setTypeface(Navigation_drawer_activity.roboto_bold);
 
             confirm_add.setGravity(Gravity.LEFT|Gravity.CENTER);
+            tv_subtotall.setGravity(Gravity.END|Gravity.CENTER);
+            tv_delfree.setGravity(Gravity.END|Gravity.CENTER);
         }
     }
 

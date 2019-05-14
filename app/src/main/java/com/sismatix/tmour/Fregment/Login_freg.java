@@ -14,6 +14,7 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -104,6 +105,8 @@ public class Login_freg extends Fragment implements View.OnClickListener, Google
             layout_login_email.setTypeface(Navigation_drawer_activity.cairo_bold);
             layout_login_password.setTypeface(Navigation_drawer_activity.cairo_bold);
             tv_login_to_title.setTypeface(Navigation_drawer_activity.cairo_bold);
+
+            tv_google.setGravity(Gravity.RIGHT);
         }else {
             tv_already_have_an_account.setTypeface(Navigation_drawer_activity.roboto_bold);
             tv_forgot_password.setTypeface(Navigation_drawer_activity.roboto_regular);
@@ -113,6 +116,7 @@ public class Login_freg extends Fragment implements View.OnClickListener, Google
             layout_login_email.setTypeface(Navigation_drawer_activity.roboto_regular);
             layout_login_password.setTypeface(Navigation_drawer_activity.roboto_regular);
             tv_login_to_title.setTypeface(Navigation_drawer_activity.roboto_bold);
+            tv_google.setGravity(Gravity.LEFT);
         }
 
     }

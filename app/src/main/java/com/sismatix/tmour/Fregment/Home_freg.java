@@ -46,8 +46,6 @@ public class Home_freg extends Fragment implements View.OnClickListener {
         view = inflater.inflate(R.layout.fragment_home_freg, container, false);
         lang_flag=Login_preference.get_Lang_flag(getActivity());
         Allocate_Memory(view);
-        setHasOptionsMenu(true);
-
         Navigation_drawer_activity.toolbar.setTitle("");
         Navigation_drawer_activity.tv_nav_title.setVisibility(View.GONE);
         Log.e("login_51 ",""+lang_flag);
@@ -100,14 +98,27 @@ public class Home_freg extends Fragment implements View.OnClickListener {
             }
         }
     }
-    public void onCreateOptionsMenu(Menu menu){
+   /* public void onCreateOptionsMenu(Menu menu){
         MenuInflater inflater = getActivity().getMenuInflater();
         inflater.inflate(R.menu.menu_search, menu);
         menu.findItem(R.id.search).setEnabled(true);
         super.onCreateOptionsMenu(menu,inflater);
     }
+*/
 
 
+   /* @Override
+    public void onPrepareOptionsMenu(Menu menu) {
+        MenuItem item=menu.findItem(R.id.search);
+        if(item!=null)
+            item.setVisible(true);
+    }
+    *//*@Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        menu.clear();
+         inflater.inflate(R.menu.menu_search, menu);
+        super.onCreateOptionsMenu(menu, inflater);
+    }*//*
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle item selection
@@ -117,12 +128,10 @@ public class Home_freg extends Fragment implements View.OnClickListener {
                 //Toast.makeText(getActivity(), "cart Icon Click", Toast.LENGTH_SHORT).show();
                 return true;
 
-
             default:
                 return super.onOptionsItemSelected(item);
         }
-    }
-
+    }*/
     @Override
     public void onClick(View view) {
         if(view==lv_home_login)

@@ -90,24 +90,24 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:orientation="vertical"
-                    android:padding="2dp">
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_cart_quantity_total"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1"
+                        android:padding="2dp"
+                        android:textColor="@color/black"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
 
                     <RelativeLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:gravity="center">
-
-                        <TextView
-                            android:id="@+id/tv_cart_quantity_total"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="1"
-                            android:textColor="@color/black"
-                            android:textSize="16dp"
-                            android:textStyle="bold" />
-                    </RelativeLayout>
+                        android:gravity="center"
+                        android:visibility="gone"></RelativeLayout>
                     <!--<ProgressBar
                         android:id="@+id/cart_count_pb"
                         android:layout_width="34dp"

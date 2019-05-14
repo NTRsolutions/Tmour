@@ -25,8 +25,7 @@
             android:layout_gravity="center"
             app:expandedTitleGravity="center"
             style="@style/CollapsedAppBar"
-
-           app:layout_scrollFlags="scroll|exitUntilCollapsed|snap|snapMargins"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap|snapMargins"
             app:titleEnabled="true">
 
             <ImageView

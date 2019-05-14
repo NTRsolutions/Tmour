@@ -1,7 +1,7 @@
 package com.sismatix.tmour.Activity;
 
 import android.app.Activity;
-import android.app.NativeActivity;
+
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.AssetManager;
@@ -39,15 +39,12 @@ import android.widget.Toast;
 import java.util.Locale;
 
 import com.sismatix.tmour.CustomTypefaceSpan;
-import com.sismatix.tmour.Fregment.About_date_street_freg;
 import com.sismatix.tmour.Fregment.Cart_freg;
-import com.sismatix.tmour.Fregment.Checkout;
 import com.sismatix.tmour.Fregment.Home_freg;
 import com.sismatix.tmour.Fregment.Login_freg;
-import com.sismatix.tmour.Fregment.My_account_freg;
 import com.sismatix.tmour.Fregment.My_order_freg;
 import com.sismatix.tmour.Fregment.Offers_freg;
-import com.sismatix.tmour.Fregment.OrderDetails;
+
 import com.sismatix.tmour.Fregment.ProductDetails;
 import com.sismatix.tmour.Fregment.Product_freg;
 import com.sismatix.tmour.Fregment.Search_freg;
@@ -269,9 +266,13 @@ public class Navigation_drawer_activity extends AppCompatActivity
 
 
 
+        ///menu icon change
         setSupportActionBar(toolbar);
         ActionBar actionbar = getSupportActionBar();
         actionbar.setDisplayHomeAsUpEnabled(true);
+        actionbar.setHomeAsUpIndicator(R.drawable.ic_menu_white_36dp);
+
+
     }
 
     private void SET_FONT_STYLE() {
@@ -323,7 +324,7 @@ public class Navigation_drawer_activity extends AppCompatActivity
 
         switch (item.getItemId()) {
             case R.id.bottom_nav_home:
-                Home_freg fragment = new Home_freg();
+                /*Home_freg fragment = new Home_freg();
 
                 if (fragment == null)
                     return;
@@ -334,7 +335,9 @@ public class Navigation_drawer_activity extends AppCompatActivity
                         ft.replace(R.id.main_fram_layout, fragment);
                         ft.commit();
                     }
-                }
+                }*/
+
+                pushFragment(new Home_freg(),"home");
 
                 break;
             case R.id.bottom_nav_product:
@@ -396,6 +399,9 @@ public class Navigation_drawer_activity extends AppCompatActivity
         }
     }
 
+    public DrawerLayout getmDrawerLayout() {
+        return drawer;
+    }
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
